@@ -1,22 +1,15 @@
-mod config;
-mod error;
-mod service;
+use sigmaos_system::{Config, SystemComponent, Component};
 
-use config::Config;
-use service::Service;
-use anyhow::Result;
-
-fn main() -> Result<()> {
+fn main() {
     env_logger::init();
-    
     let config = Config::default();
-    let mut service = Service::new(config);
-    
-    service.start()?;
-    println!("Service started successfully");
-    
-    service.stop()?;
-    println!("Service stopped successfully");
-    
-    Ok(())
+    let mut component = SystemComponent::new(config);
+    if let Err(e) = component.initialize() {
+        eprintln!("Failed to initialize: {}", e);
+        std::process::exit(1);
+    }
+    println!("SigmaOS system running");
+    if let Err(e) = component.shutdown() {
+        eprintln!("Shutdown error: {}", e);
+    }
 }
