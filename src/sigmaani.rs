@@ -3,7 +3,6 @@
 //! Provides comprehensive animation and graphics management inspired by Ani Craft.
 //! Supports keyframe animation, tweening, and graphics primitives.
 
-#![no_std]
 
 extern crate alloc;
 

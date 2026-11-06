@@ -5,7 +5,6 @@
 //!
 //! SigmaSSH provides system SSH server functionality for SigmaOS, inspired by OpenSSH from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

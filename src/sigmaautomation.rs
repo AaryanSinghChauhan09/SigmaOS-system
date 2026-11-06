@@ -3,7 +3,6 @@
 //! Provides comprehensive task automation and scheduling inspired by Linux automation tools.
 //! Supports task automation, scheduling, and workflow management.
 
-#![no_std]
 
 extern crate alloc;
 

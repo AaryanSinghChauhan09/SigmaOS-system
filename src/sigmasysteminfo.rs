@@ -3,7 +3,6 @@
 //! Provides comprehensive system information reporting inspired by Linux system info tools.
 //! Supports hardware detection, OS version reporting, and system configuration.
 
-#![no_std]
 
 extern crate alloc;
 

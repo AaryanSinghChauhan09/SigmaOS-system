@@ -3,8 +3,8 @@
 //! Inspired by Linux Mint's Ubiquity and Calamares, this module provides a comprehensive
 //! graphical system installer with partition management, locale selection, and user configuration.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

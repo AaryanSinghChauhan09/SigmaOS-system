@@ -2,7 +2,6 @@
 // SigmaOS - Profile Manager
 // Profile management inspired by Omarchy profiles and Linux profile systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

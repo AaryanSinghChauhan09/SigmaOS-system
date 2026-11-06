@@ -3,8 +3,8 @@
 //! Inspired by Flatpak, this module provides Flatpak package management including
 //! sandboxed applications, runtime management, and Flatpak repository support.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

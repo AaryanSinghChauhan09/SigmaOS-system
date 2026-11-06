@@ -3,7 +3,6 @@
 //! Provides comprehensive performance monitoring and profiling inspired by Linux performance tools.
 //! Supports system performance tracking, bottleneck detection, and optimization recommendations.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides comprehensive timer and alarm management inspired by Linux timer tools.
 //! Supports countdown timers, alarms, and scheduling.
 
-#![no_std]
 
 extern crate alloc;
 

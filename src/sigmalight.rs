@@ -3,7 +3,6 @@
 //! Provides comprehensive lighting and color management inspired by Light Craft.
 //! Supports light sources, color temperature, brightness control, and lighting scenes.
 
-#![no_std]
 
 extern crate alloc;
 

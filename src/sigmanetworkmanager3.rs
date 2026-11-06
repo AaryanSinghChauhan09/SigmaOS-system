@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 // SigmaOS Network Manager 3
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::String;

@@ -3,8 +3,8 @@
 //! Inspired by Walker (Omarchy Linux), this module provides Wayland compositor
 //! management including window rules, workspace management, and keybindings.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

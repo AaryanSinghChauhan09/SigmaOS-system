@@ -5,7 +5,6 @@
 //!
 //! SigmaMonitor provides system monitoring for SigmaOS, inspired by htop/glances from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

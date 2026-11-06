@@ -3,7 +3,6 @@
 // Inspired by Linux preload (systemd/udev preload)
 // Provides application preloading for faster launch times
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

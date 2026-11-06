@@ -3,7 +3,6 @@
 // Inspired by cron, systemd timers, anacron
 // Provides task scheduling capabilities
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

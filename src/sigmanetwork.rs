@@ -3,7 +3,6 @@
 //! Provides comprehensive network configuration inspired by Linux NetworkManager and BSD networking.
 //! Supports network interfaces, connections, and DNS configuration.
 
-#![no_std]
 
 extern crate alloc;
 

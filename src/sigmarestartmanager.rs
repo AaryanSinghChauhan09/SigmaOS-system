@@ -2,7 +2,6 @@
 // SigmaOS - Restart Manager
 // Component restart management inspired by Omarchy restart-* commands and Linux service restart
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

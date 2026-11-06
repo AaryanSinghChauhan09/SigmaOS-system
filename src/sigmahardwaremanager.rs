@@ -2,7 +2,6 @@
 // SigmaOS - Hardware Manager
 // Hardware detection and management inspired by Omarchy hw-* commands and Linux hardware systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

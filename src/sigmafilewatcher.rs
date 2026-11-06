@@ -1,3 +1,4 @@
+extern crate alloc;
 use alloc::string::String;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

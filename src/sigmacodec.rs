@@ -3,8 +3,8 @@
 //! Inspired by GStreamer and FFmpeg, this module provides comprehensive multimedia
 //! codec management including codec registration, format conversion, and media processing.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

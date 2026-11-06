@@ -3,7 +3,6 @@
 //! Provides comprehensive task management inspired by Linux process management.
 //! Supports task creation, scheduling, and resource monitoring.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -1,4 +1,3 @@
-#![cfg_attr(not(test), no_std)]
 // SigmaOS Syslog System
 // Linux/BSD distro-inspired logging system
 // Handles system logging, log rotation, and log management

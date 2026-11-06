@@ -5,7 +5,6 @@
 //!
 //! SigmaAudit provides system audit logging for SigmaOS, inspired by auditd from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

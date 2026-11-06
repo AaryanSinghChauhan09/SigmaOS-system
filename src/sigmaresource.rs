@@ -5,7 +5,6 @@
 //!
 //! SigmaResource provides system resource management for SigmaOS, inspired by cgroups/ulimit from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

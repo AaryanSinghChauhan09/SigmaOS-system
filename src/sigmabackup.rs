@@ -3,8 +3,8 @@
 //! Inspired by Deja Dup (Linux Mint), this module provides system backup and
 //! restore functionality with encryption, scheduling, and incremental backups.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

@@ -4,8 +4,8 @@
 //! including support for multiple filesystem types, configuration options,
 //! and formatting operations.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};
@@ -163,8 +163,10 @@ impl SigmaMkfs {
     pub fn create_filesystem(&mut self, filesystem: Filesystem) -> bool {
         let fs_id = filesystem.filesystem_id.clone();
         self.filesystems.insert(fs_id.clone(), filesystem);
-        if let Some(fs) = self.filesystems.get_mut(&fs_id) {
-            fs.set_state(FilesystemState::Created);
+        if self.filesystems.contains_key(&fs_id) {
+            if let Some(fs) = self.filesystems.get_mut(&fs_id) {
+                fs.set_state(FilesystemState::Created);
+            }
             true
         } else {
             false
@@ -179,6 +181,11 @@ impl SigmaMkfs {
     /// Get a filesystem by ID
     pub fn get_filesystem(&self, filesystem_id: &str) -> Option<&Filesystem> {
         self.filesystems.get(filesystem_id)
+    }
+
+    /// Get a mutable filesystem by ID
+    pub fn get_filesystem_mut(&mut self, filesystem_id: &str) -> Option<&mut Filesystem> {
+        self.filesystems.get_mut(filesystem_id)
     }
 
     /// List all filesystems
@@ -446,11 +453,15 @@ mod tests {
         );
         mkfs.create_filesystem(fs2);
 
+        // create_filesystem marks entries Created; move fs2 to Failed so the
+        // by-state filter has a non-Created entry to find.
+        mkfs.get_filesystem_mut("fs2").unwrap().set_state(FilesystemState::Failed);
+
         let created_fs = mkfs.list_filesystems_by_state(FilesystemState::Created);
         assert_eq!(created_fs.len(), 1);
 
-        let unknown_fs = mkfs.list_filesystems_by_state(FilesystemState::Unknown);
-        assert_eq!(unknown_fs.len(), 1);
+        let failed_fs = mkfs.list_filesystems_by_state(FilesystemState::Failed);
+        assert_eq!(failed_fs.len(), 1);
     }
 
     #[test]

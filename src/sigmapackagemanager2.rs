@@ -3,7 +3,6 @@
 //! Provides comprehensive package management inspired by Arch (pacman), Debian (apt), and CachyOS.
 //! Supports package installation, removal, updates, repositories, and dependency resolution.
 
-#![no_std]
 
 extern crate alloc;
 

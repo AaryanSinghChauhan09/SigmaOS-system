@@ -1,4 +1,3 @@
-#![no_std]
 extern crate alloc;
 use alloc::string::{String, ToString};
 use alloc::vec::Vec;
@@ -122,6 +121,11 @@ impl RemoteManager {
         };
         self.commands.push(remote_command);
         Ok(id)
+    }
+
+    /// Get connection by ID
+    pub fn get_connection(&self, id: &str) -> Option<&RemoteConnection> {
+        self.connections.iter().find(|c| c.id == id)
     }
 
     /// Get all connections

@@ -3,7 +3,6 @@
 //! Provides comprehensive microphone management inspired by Linux ALSA and PulseAudio.
 //! Supports microphone discovery, audio capture, and input device control.
 
-#![no_std]
 
 extern crate alloc;
 

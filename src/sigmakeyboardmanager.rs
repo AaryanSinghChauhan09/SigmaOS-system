@@ -3,7 +3,6 @@
 //! Provides comprehensive keyboard and input management inspired by Linux Mint and Omarchy.
 //! Supports keyboard layouts, keybindings, input methods, and keyboard shortcuts.
 
-#![no_std]
 
 extern crate alloc;
 

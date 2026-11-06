@@ -2,7 +2,6 @@
 // SigmaOS - Launch Manager
 // Application launching inspired by Omarchy launch-* commands and Linux launch systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

@@ -3,7 +3,6 @@
 //! Provides comprehensive system monitoring inspired by Linux system monitoring tools.
 //! Supports CPU, memory, disk, network, and temperature monitoring.
 
-#![no_std]
 
 extern crate alloc;
 

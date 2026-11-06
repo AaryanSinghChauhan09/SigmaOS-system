@@ -2,7 +2,6 @@
 // SigmaOS - Snapshot Manager
 // Snapshot management inspired by Arch (btrfs snapshots), Debian (LVM snapshots), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

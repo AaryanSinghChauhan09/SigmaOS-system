@@ -3,7 +3,6 @@
 //! Provides comprehensive PDF document management inspired by PDF Craft.
 //! Supports PDF creation, manipulation, rendering, and extraction.
 
-#![no_std]
 
 extern crate alloc;
 

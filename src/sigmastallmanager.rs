@@ -2,7 +2,6 @@
 // SigmaOS - Install Manager
 // Installation management inspired by Omarchy install-* commands and Linux package managers
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

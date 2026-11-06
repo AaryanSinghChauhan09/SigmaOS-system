@@ -3,7 +3,6 @@
 //! Provides comprehensive system utilities inspired by Linux Mint and Omarchy.
 //! Supports system monitoring, cleanup, maintenance, and user-friendly tools.
 
-#![no_std]
 
 extern crate alloc;
 
@@ -112,7 +111,7 @@ impl MaintenanceTask {
     }
 
     pub fn is_due(&self, current_time: &str) -> bool {
-        self.enabled && current_time >= &self.next_run
+        self.enabled && current_time >= self.next_run.as_str()
     }
 }
 

@@ -5,7 +5,6 @@
 //!
 //! SigmaLogRotate provides log rotation for SigmaOS, inspired by logrotate from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

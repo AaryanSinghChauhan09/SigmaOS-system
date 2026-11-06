@@ -3,7 +3,6 @@
 //! Provides comprehensive scanner management inspired by Linux SANE and scanner backends.
 //! Supports scanner discovery, scan job management, and image acquisition.
 
-#![no_std]
 
 extern crate alloc;
 

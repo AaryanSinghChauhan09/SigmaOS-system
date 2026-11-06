@@ -5,7 +5,6 @@
 //!
 //! SigmaDB provides system database server functionality for SigmaOS, inspired by PostgreSQL/MySQL from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

@@ -3,7 +3,6 @@
 //! Provides comprehensive driver management inspired by Omarchy and Linux Mint.
 //! Supports driver installation, updates, detection, and hardware compatibility.
 
-#![no_std]
 
 extern crate alloc;
 

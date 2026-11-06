@@ -3,7 +3,6 @@
 //! Provides comprehensive shared libraries management inspired by CraftLibs.
 //! Supports library loading, versioning, dependencies, and shared resources.
 
-#![no_std]
 
 extern crate alloc;
 

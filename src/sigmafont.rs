@@ -3,7 +3,6 @@
 //! Provides comprehensive font management inspired by Font Craft.
 //! Supports font loading, glyph management, and text rendering.
 
-#![no_std]
 
 extern crate alloc;
 

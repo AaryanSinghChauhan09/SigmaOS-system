@@ -3,7 +3,6 @@
 //! Provides comprehensive design system and UI component management inspired by Design Craft.
 //! Supports design tokens, component library, and theming.
 
-#![no_std]
 
 extern crate alloc;
 

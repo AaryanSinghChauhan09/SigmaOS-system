@@ -5,7 +5,6 @@
 //!
 //! SigmaStorage provides storage management functionality for SigmaOS, inspired by LVM/parted from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

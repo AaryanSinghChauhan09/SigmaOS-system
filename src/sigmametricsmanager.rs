@@ -1,4 +1,3 @@
-#![no_std]
 extern crate alloc;
 use alloc::string::{String, ToString};
 use alloc::vec::Vec;
@@ -157,6 +156,11 @@ impl MetricsManager {
     /// Get metric by ID
     pub fn get_metric(&self, id: &str) -> Option<&Metric> {
         self.metrics.iter().find(|m| m.id == id)
+    }
+
+    /// Get collector by ID
+    pub fn get_collector(&self, id: &str) -> Option<&MetricCollector> {
+        self.collectors.iter().find(|c| c.id == id)
     }
 
     /// Get all collectors

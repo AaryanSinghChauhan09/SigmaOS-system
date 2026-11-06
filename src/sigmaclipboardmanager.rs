@@ -3,7 +3,6 @@
 //! Provides comprehensive clipboard management inspired by Linux clipboard tools.
 //! Supports clipboard history, format support, and item management.
 
-#![no_std]
 
 extern crate alloc;
 

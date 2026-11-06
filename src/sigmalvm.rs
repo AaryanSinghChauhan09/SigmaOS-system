@@ -3,8 +3,8 @@
 //! Inspired by Linux LVM, this module provides comprehensive logical volume
 //! management including physical volumes, volume groups, and logical volumes.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

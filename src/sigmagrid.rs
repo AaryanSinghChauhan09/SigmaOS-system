@@ -3,7 +3,6 @@
 //! Provides comprehensive grid layout management inspired by Grid Craft.
 //! Supports grid systems, responsive layouts, and alignment.
 
-#![no_std]
 
 extern crate alloc;
 

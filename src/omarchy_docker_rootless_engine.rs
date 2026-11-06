@@ -3,7 +3,6 @@
 // Inspired by Omarchy branch: docker-no-group
 // Zero external dependencies, Safe Rust
 
-#![cfg_attr(not(any(feature = "standalone_test", test)), no_std)]
 
 #[cfg(any(feature = "standalone_test", test))]
 use std::{format, string::String, vec::Vec};

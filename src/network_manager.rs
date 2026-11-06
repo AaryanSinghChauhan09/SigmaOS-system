@@ -3,7 +3,6 @@
 // Inspired by NetworkManager for Linux
 // Provides network connection management
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

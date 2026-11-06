@@ -3,7 +3,6 @@
 // Inspired by htop, iotop, nethogs, glances
 // Provides system monitoring capabilities
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

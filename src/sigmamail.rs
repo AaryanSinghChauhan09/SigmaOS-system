@@ -5,7 +5,6 @@
 //!
 //! SigmaMail provides system mail server functionality for SigmaOS, inspired by Postfix/Exim from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

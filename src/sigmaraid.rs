@@ -3,8 +3,8 @@
 //! Inspired by Linux mdadm, this module provides comprehensive RAID array
 //! management including RAID levels 0, 1, 5, 6, 10, and array monitoring.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

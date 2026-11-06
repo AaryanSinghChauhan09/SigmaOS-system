@@ -3,7 +3,6 @@
 //! Provides comprehensive user account management inspired by Linux Mint and Omarchy.
 //! Supports user creation, modification, deletion, groups, and permissions.
 
-#![no_std]
 
 extern crate alloc;
 

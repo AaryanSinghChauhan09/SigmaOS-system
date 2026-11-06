@@ -2,7 +2,6 @@
 // SigmaOS - Container Manager
 // Container management inspired by Arch (docker, podman), Debian (docker), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::format;

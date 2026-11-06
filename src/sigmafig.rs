@@ -3,7 +3,6 @@
 //! Provides comprehensive figure and diagram management inspired by Fig Craft.
 //! Supports diagram creation, node graphs, and visual connectors.
 
-#![no_std]
 
 extern crate alloc;
 

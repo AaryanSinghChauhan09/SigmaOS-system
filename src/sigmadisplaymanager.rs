@@ -3,6 +3,7 @@
 // Provides display output management following COMPOSITION OVER INHERITANCE,
 // SEPARATION OF CONCERNS, SINGLE RESPONSIBILITY, and MODULAR DESIGN principles.
 
+extern crate alloc;
 use alloc::string::String;
 use alloc::vec::Vec;
 use core::sync::atomic::{AtomicBool, Ordering};

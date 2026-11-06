@@ -5,7 +5,6 @@
 //!
 //! SigmaConfig provides system configuration management for SigmaOS, inspired by sysconfig/gconf from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

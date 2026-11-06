@@ -2,7 +2,6 @@
 // SigmaOS - Menu Manager
 // Menu management inspired by Omarchy menu structure and Linux menu systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

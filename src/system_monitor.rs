@@ -3,7 +3,6 @@
 // Inspired by htop, btop, and gnome-system-monitor
 // Provides system resource monitoring
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

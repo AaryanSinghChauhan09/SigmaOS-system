@@ -2,7 +2,6 @@
 // SigmaOS - Virtualization Manager
 // Virtualization management inspired by Arch (KVM, QEMU), Debian (libvirt), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::format;

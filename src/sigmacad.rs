@@ -3,7 +3,6 @@
 //! Provides comprehensive CAD and technical drawing management inspired by CAD Craft.
 //! Supports geometric primitives, constraints, and dimensioning.
 
-#![no_std]
 
 extern crate alloc;
 

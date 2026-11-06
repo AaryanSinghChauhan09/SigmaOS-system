@@ -3,7 +3,6 @@
 //! Provides comprehensive 3D graphics management inspired by 3D Craft and Blender.
 //! Supports 3D rendering, scene management, and model handling.
 
-#![no_std]
 
 extern crate alloc;
 

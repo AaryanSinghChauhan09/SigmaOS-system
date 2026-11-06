@@ -3,7 +3,6 @@
 //! Provides comprehensive job scheduling inspired by Linux cron and systemd timers.
 //! Supports time-based scheduling, recurring jobs, and job execution management.
 
-#![no_std]
 
 extern crate alloc;
 

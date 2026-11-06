@@ -2,7 +2,6 @@
 // SigmaOS - Path Manager
 // Path management inspired by Omarchy $OMARCHY_PATH and Linux path systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

@@ -2,7 +2,6 @@
 // SigmaOS - Command Manager
 // Command management inspired by Omarchy command structure and Linux shell systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

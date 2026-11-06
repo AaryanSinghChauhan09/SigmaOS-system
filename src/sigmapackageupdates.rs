@@ -2,7 +2,6 @@
 // SigmaOS - Package Updates
 // Package update management inspired by Arch (pacman), Debian (apt), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

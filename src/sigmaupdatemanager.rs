@@ -4,8 +4,8 @@
 //! system update management including security updates, package updates, and
 //! automatic update scheduling.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

@@ -3,7 +3,6 @@
 // Inspired by Linux Mint Tools (mintbackup, mintupdate, mintinstall, driver manager, system reports)
 // Provides backup, update, software management, driver management, and system diagnostics
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

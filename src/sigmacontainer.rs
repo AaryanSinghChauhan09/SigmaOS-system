@@ -3,7 +3,6 @@
 //! Provides comprehensive container management inspired by Docker, Podman, and LXC.
 //! Supports container lifecycle, resource limits, networking, and storage management.
 
-#![no_std]
 
 extern crate alloc;
 

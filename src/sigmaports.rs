@@ -3,7 +3,6 @@
 //! Provides comprehensive package building inspired by FreeBSD Ports and Arch PKGBUILD.
 //! Supports package definition, dependency management, and build configuration.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides comprehensive system search and indexing inspired by Linux search tools.
 //! Supports file search, content search, and index management.
 
-#![no_std]
 
 extern crate alloc;
 

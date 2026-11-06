@@ -2,7 +2,6 @@
 // SigmaOS - Notification Manager
 // Notification management inspired by Omarchy notification system and Linux notification daemons
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

@@ -2,7 +2,6 @@
 // SigmaOS - Task Scheduler
 // Task scheduling inspired by Arch (systemd timers), Debian (cron), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

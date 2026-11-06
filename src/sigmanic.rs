@@ -5,7 +5,6 @@
 //!
 //! SigmaNIC provides network interface management functionality for SigmaOS, inspired by NetworkManager/ifconfig from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

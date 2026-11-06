@@ -2,7 +2,6 @@
 // SigmaOS - Theme Manager
 // Theme management inspired by Omarchy theme structure and Linux theme systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

@@ -5,7 +5,6 @@
 //!
 //! SigmaIntegrity provides file integrity monitoring for SigmaOS, inspired by AIDE/OSSEC from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

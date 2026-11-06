@@ -3,8 +3,8 @@
 //! Inspired by Linux Mint's system recovery and boot repair tools, this module provides
 //! system recovery including boot repair, GRUB management, and system restore.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

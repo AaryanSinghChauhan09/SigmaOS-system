@@ -2,7 +2,6 @@
 // SigmaOS - Capture Manager
 // Capture management inspired by Omarchy capture-* commands and Linux capture tools
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

@@ -3,7 +3,6 @@
 //! Provides comprehensive word processing management inspired by Word Craft.
 //! Supports document creation, text formatting, paragraphs, and document management.
 
-#![no_std]
 
 extern crate alloc;
 

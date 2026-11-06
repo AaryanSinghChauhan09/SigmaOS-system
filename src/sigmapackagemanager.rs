@@ -3,8 +3,8 @@
 //! Inspired by APT (Linux Mint) and Pacman (Arch), this module provides a unified
 //! package management interface supporting multiple package formats.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

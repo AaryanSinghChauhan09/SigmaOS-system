@@ -2,7 +2,6 @@
 // SigmaOS - Environment Manager
 // Environment variable management inspired by Omarchy environment and Linux env systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

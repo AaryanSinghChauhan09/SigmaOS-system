@@ -2,7 +2,6 @@
 // SigmaOS - Privilege Manager
 // Privilege escalation management inspired by Omarchy privilege handling and Linux sudo/pkexec
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

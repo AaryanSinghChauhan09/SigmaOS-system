@@ -3,7 +3,6 @@
 //! Provides comprehensive swap space management inspired by Linux swapon/swapoff
 //! and BSD swap management. Supports swap devices, swap files, and priority configuration.
 
-#![no_std]
 
 extern crate alloc;
 

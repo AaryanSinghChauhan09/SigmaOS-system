@@ -3,7 +3,6 @@
 //! Provides comprehensive print management inspired by Print Craft.
 //! Supports print jobs, printer discovery, queue management, and printing options.
 
-#![no_std]
 
 extern crate alloc;
 

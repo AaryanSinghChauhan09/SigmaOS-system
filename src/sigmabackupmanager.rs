@@ -2,7 +2,6 @@
 // SigmaOS - Backup Manager
 // Backup management inspired by Arch (borg), Debian (restic), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::format;

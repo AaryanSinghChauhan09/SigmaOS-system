@@ -2,7 +2,6 @@
 // SigmaOS - Template Manager
 // Template management inspired by Omarchy themed templates and Linux template systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

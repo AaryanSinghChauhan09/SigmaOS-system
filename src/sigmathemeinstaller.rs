@@ -3,8 +3,8 @@
 //! Inspired by Linux Mint's theme management, this module provides comprehensive
 //! theme installation including icon themes, cursor themes, and GTK themes.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

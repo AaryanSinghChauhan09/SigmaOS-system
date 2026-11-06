@@ -3,7 +3,6 @@
 //! Provides comprehensive disk usage analysis inspired by Linux df and du utilities.
 //! Supports filesystem monitoring, space calculation, and usage reporting.
 
-#![no_std]
 
 extern crate alloc;
 

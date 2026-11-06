@@ -3,8 +3,8 @@
 //! Inspired by swww (Omarchy Linux), this module provides comprehensive wallpaper
 //! management including Wayland support, transition effects, and per-monitor wallpapers.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

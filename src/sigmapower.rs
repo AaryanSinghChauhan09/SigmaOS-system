@@ -3,7 +3,6 @@
 //! Provides comprehensive power management settings inspired by Linux power management tools.
 //! Supports power profiles, screen brightness, and power saving modes.
 
-#![no_std]
 
 extern crate alloc;
 
@@ -53,7 +52,7 @@ impl Brightness {
         if self.max == self.min {
             0
         } else {
-            ((self.level - self.min) * 100) / (self.max - self.min)
+            ((self.level.saturating_sub(self.min) as u32 * 100) / (self.max.saturating_sub(self.min) as u32)) as u8
         }
     }
 }

@@ -3,7 +3,6 @@
 //! Provides comprehensive printer management inspired by Linux CUPS and BSD printing.
 //! Supports printer discovery, job management, and printer configuration.
 
-#![no_std]
 
 extern crate alloc;
 

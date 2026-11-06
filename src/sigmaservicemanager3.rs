@@ -3,7 +3,6 @@
 //! Provides comprehensive service management inspired by Arch (systemd), Debian (systemd), and CachyOS.
 //! Supports service start/stop, enable/disable, status tracking, and service dependencies.
 
-#![no_std]
 
 extern crate alloc;
 

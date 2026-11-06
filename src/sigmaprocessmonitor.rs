@@ -3,7 +3,6 @@
 //! Provides comprehensive process monitoring inspired by Linux process tools.
 //! Supports process discovery, resource tracking, and performance analysis.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides BSD-style jail container isolation inspired by FreeBSD Jails.
 //! Supports process isolation, resource limits, and security containment.
 
-#![no_std]
 
 extern crate alloc;
 

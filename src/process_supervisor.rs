@@ -1,4 +1,3 @@
-#![cfg_attr(not(test), no_std)]
 use std::vec;
 // SigmaOS Process Supervisor
 // Linux/BSD distro-inspired process management

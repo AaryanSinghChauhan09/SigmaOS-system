@@ -3,7 +3,6 @@
 //! Provides comprehensive ACPI power management inspired by Linux ACPI and BSD ACPI.
 //! Supports power events, battery management, and thermal control.
 
-#![no_std]
 
 extern crate alloc;
 

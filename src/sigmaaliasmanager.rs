@@ -2,7 +2,6 @@
 // SigmaOS - Alias Manager
 // Alias management inspired by Omarchy menu aliases and Linux alias systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

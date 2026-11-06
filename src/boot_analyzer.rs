@@ -3,7 +3,6 @@
 // Inspired by systemd-analyze
 // Provides boot performance analysis and optimization
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

@@ -2,7 +2,6 @@
 // SigmaOS - Config Manager
 // Configuration management inspired by Omarchy config structure and Linux config systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

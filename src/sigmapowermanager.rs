@@ -3,7 +3,6 @@
 //! Provides comprehensive power management inspired by Linux Mint and Omarchy.
 //! Supports power profiles, battery management, power settings, and power statistics.
 
-#![no_std]
 
 extern crate alloc;
 
@@ -138,11 +137,11 @@ impl BatteryInfo {
     }
 
     pub fn is_low(&self) -> bool {
-        self.capacity < 20
+        self.capacity < 30
     }
 
     pub fn is_critical(&self) -> bool {
-        self.capacity < 10
+        self.capacity < 20
     }
 }
 

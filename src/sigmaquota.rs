@@ -3,8 +3,8 @@
 //! Inspired by Linux quota, this module provides comprehensive filesystem quota
 //! management including user quotas, group quotas, and space usage tracking.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

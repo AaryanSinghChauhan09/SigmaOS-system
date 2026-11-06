@@ -2,7 +2,6 @@
 // SigmaOS - Resource Manager
 // Resource management inspired by Arch (cgroups), Debian (systemd resource limits), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

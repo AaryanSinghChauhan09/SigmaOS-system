@@ -2,7 +2,6 @@
 // SigmaOS - System Monitor 2
 // System monitoring inspired by Arch (htop, iotop), Debian (top), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

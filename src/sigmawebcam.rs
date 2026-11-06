@@ -3,7 +3,6 @@
 //! Provides comprehensive webcam management inspired by Linux V4L2 (Video4Linux2).
 //! Supports webcam discovery, video capture, and camera control.
 
-#![no_std]
 
 extern crate alloc;
 

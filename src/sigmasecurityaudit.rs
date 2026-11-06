@@ -3,7 +3,6 @@
 //! Provides comprehensive security audit and compliance inspired by Linux security tools.
 //! Supports security scanning, vulnerability detection, and compliance reporting.
 
-#![no_std]
 
 extern crate alloc;
 

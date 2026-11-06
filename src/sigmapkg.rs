@@ -5,7 +5,6 @@
 //!
 //! SigmaPkg provides package management for SigmaOS, inspired by apt/dnf from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

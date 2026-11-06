@@ -5,7 +5,6 @@
 //!
 //! SigmaNTP provides system NTP client functionality for SigmaOS, inspired by ntpd/chrony from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

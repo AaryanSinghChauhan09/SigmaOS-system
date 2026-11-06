@@ -3,7 +3,6 @@
 //! Provides comprehensive namespace management inspired by Linux namespaces.
 //! Supports process isolation through mount, network, PID, user, UTS, IPC, and cgroup namespaces.
 
-#![no_std]
 
 extern crate alloc;
 

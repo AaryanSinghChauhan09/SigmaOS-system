@@ -2,7 +2,6 @@
 // SigmaOS - Setup Manager
 // Setup wizard management inspired by Omarchy setup-* commands and Linux setup systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

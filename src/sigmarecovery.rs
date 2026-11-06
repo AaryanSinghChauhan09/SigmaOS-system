@@ -5,7 +5,6 @@
 //!
 //! SigmaRecovery provides system recovery for SigmaOS, inspired by GRUB/recovery mode from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

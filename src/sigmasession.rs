@@ -5,7 +5,6 @@
 //!
 //! SigmaSession provides user session management for SigmaOS, inspired by systemd-logind from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

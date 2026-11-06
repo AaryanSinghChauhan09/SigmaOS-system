@@ -3,7 +3,6 @@
 //! Provides comprehensive hibernation (suspend-to-disk) management inspired by Linux
 //! hibernation and BSD ACPI sleep states. Supports hibernation, suspend, and resume operations.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -1,7 +1,6 @@
 // SigmaOS Kernel Dmesg Ring Buffer & Syslog Logging Subsystem
 // Reference: Linux kernel/printk/printk.c, /dev/kmsg, dmesg(1)
 
-#![allow(dead_code)]
 
 extern crate alloc;
 use alloc::collections::VecDeque;

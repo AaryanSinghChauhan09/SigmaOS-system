@@ -3,7 +3,6 @@
 //! Provides comprehensive init system and service management inspired by systemd.
 //! Supports service units, targets, dependencies, and system state management.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides comprehensive effects and filters management inspired by Effect Craft.
 //! Supports image filters, visual effects, and post-processing.
 
-#![no_std]
 
 extern crate alloc;
 

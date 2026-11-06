@@ -3,7 +3,6 @@
 //! Provides comprehensive voice and speech management inspired by Voice Craft.
 //! Supports speech recognition, text-to-speech, voice commands, and audio processing.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -5,7 +5,6 @@
 //!
 //! SigmaDHCP provides system DHCP client functionality for SigmaOS, inspired by dhclient from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

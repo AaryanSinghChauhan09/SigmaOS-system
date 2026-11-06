@@ -2,7 +2,6 @@
 // SigmaOS - Hardware Profiler
 // Hardware performance profiling and benchmarking inspired by Arch and Debian
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

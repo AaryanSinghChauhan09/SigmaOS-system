@@ -5,7 +5,6 @@
 //!
 //! SigmaDNS provides system DNS management for SigmaOS, inspired by systemd-resolved from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

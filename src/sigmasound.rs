@@ -3,7 +3,6 @@
 //! Provides comprehensive audio management inspired by Linux PulseAudio and PipeWire.
 //! Supports audio devices, volume control, and audio routing.
 
-#![no_std]
 
 extern crate alloc;
 

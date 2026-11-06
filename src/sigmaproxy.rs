@@ -5,7 +5,6 @@
 //!
 //! SigmaProxy provides system proxy server functionality for SigmaOS, inspired by Squid from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

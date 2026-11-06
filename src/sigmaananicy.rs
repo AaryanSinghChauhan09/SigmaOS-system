@@ -3,8 +3,8 @@
 //! Inspired by Ananicy (Omarchy Linux), this module provides automatic process
 //! nice/renice management for improved system responsiveness and CPU scheduling.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

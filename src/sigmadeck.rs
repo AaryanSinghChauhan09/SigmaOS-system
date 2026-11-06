@@ -3,7 +3,6 @@
 //! Provides comprehensive deck and presentation management inspired by Deck Craft.
 //! Supports slides, presentations, transitions, and slide organization.
 
-#![no_std]
 
 extern crate alloc;
 

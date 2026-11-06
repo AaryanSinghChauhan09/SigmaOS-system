@@ -5,7 +5,6 @@
 //!
 //! SigmaEvent provides system event management for SigmaOS, inspired by udev/dbus from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

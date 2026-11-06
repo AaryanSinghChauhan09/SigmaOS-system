@@ -3,8 +3,8 @@
 //! Inspired by Quickshell (Omarchy Linux), this module provides shell configuration
 //! management with templating, module loading, and hot-reload capabilities.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

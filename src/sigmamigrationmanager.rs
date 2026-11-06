@@ -2,7 +2,6 @@
 // SigmaOS - Migration Manager
 // Migration management inspired by Omarchy migrations and Linux database migrations
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

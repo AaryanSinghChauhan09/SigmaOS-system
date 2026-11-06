@@ -5,7 +5,6 @@
 //!
 //! SigmaFTP provides system FTP server functionality for SigmaOS, inspired by vsftpd/proftpd from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

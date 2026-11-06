@@ -5,7 +5,6 @@
 //!
 //! SigmaCache provides system cache daemon functionality for SigmaOS, inspired by memcached/redis from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

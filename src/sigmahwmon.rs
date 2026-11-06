@@ -4,8 +4,8 @@
 //! including temperature sensors, voltage sensors, fan speed monitoring, and
 //! hardware health tracking.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};
@@ -69,9 +69,11 @@ impl HardwareSensor {
 
     /// Calculate sensor state based on current value
     fn calculate_state(current: f64, min: f64, max: f64) -> SensorState {
-        if current < min * 0.9 || current > max * 1.1 {
+        // Critical: beyond +5% of max or below min entirely.
+        if current > max * 1.05 || current < min {
             SensorState::Critical
-        } else if current < min * 0.95 || current > max * 1.05 {
+        // Warning: in the outer band (past 90% of max, or below min*1.1).
+        } else if current > max * 0.9 || current < min * 1.1 {
             SensorState::Warning
         } else {
             SensorState::Normal

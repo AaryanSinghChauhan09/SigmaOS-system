@@ -3,8 +3,8 @@
 //! Inspired by Wallust (Omarchy Linux), this module provides automatic color scheme
 //! generation from wallpapers and images with template support.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

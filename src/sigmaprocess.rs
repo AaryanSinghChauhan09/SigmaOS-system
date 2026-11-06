@@ -5,7 +5,6 @@
 //!
 //! SigmaProcess provides system process management for SigmaOS, inspired by kill/ps/top from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

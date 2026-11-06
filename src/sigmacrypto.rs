@@ -4,7 +4,6 @@
 //! including encryption key management, encrypted volume creation, and
 //! encryption state tracking.
 
-#![no_std]
 
 extern crate alloc;
 

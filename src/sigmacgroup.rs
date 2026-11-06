@@ -3,7 +3,6 @@
 //! Provides comprehensive control groups management inspired by Linux cgroups v2.
 //! Supports resource limiting, accounting, and control for process groups.
 
-#![no_std]
 
 extern crate alloc;
 

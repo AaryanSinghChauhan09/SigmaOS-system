@@ -3,7 +3,6 @@
 //! Provides comprehensive virtual machine management inspired by KVM, QEMU, and VirtualBox.
 //! Supports VM lifecycle, resource allocation, disk management, and network configuration.
 
-#![no_std]
 
 extern crate alloc;
 

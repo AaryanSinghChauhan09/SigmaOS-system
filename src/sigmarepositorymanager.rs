@@ -2,7 +2,6 @@
 // SigmaOS - Repository Manager
 // Repository management inspired by Arch (pacman repositories), Debian (apt sources), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

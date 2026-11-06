@@ -3,7 +3,6 @@
 //! Provides comprehensive Bluetooth management inspired by Linux BlueZ and BSD Bluetooth stack.
 //! Supports device discovery, pairing, connection management, and profile handling.
 
-#![no_std]
 
 extern crate alloc;
 

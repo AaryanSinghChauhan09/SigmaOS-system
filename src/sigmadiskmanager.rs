@@ -3,7 +3,6 @@
 //! Provides comprehensive disk management inspired by Linux disk utilities.
 //! Supports disk discovery, partitioning, and storage device control.
 
-#![no_std]
 
 extern crate alloc;
 

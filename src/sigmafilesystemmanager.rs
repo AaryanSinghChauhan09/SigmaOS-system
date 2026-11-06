@@ -3,7 +3,6 @@
 //! Provides comprehensive filesystem management inspired by Arch, Debian, and CachyOS.
 //! Supports filesystem creation, mounting, formatting, and filesystem health monitoring.
 
-#![no_std]
 
 extern crate alloc;
 

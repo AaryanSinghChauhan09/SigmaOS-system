@@ -2,7 +2,6 @@
 // SigmaOS - Session Manager
 // Session management inspired by Omarchy uwsm session and Linux session systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

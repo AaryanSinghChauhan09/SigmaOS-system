@@ -4,8 +4,8 @@
 //! including device detection, enumeration, hot-plug support, and device
 //! event handling.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

@@ -2,7 +2,6 @@
 // SigmaOS - Log Manager
 // Log management inspired by Arch (journalctl), Debian (rsyslog), and CachyOS
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

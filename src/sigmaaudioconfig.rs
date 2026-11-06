@@ -4,8 +4,8 @@
 //! comprehensive audio configuration including device selection, latency tuning, and
 //! audio routing.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

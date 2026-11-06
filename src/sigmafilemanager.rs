@@ -3,7 +3,6 @@
 //! Provides comprehensive file management operations inspired by Linux file utilities.
 //! Supports file operations, directory management, and file permissions.
 
-#![no_std]
 
 extern crate alloc;
 

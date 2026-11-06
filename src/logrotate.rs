@@ -3,7 +3,6 @@
 // Inspired by logrotate (https://github.com/logrotate/logrotate)
 // Provides automatic log rotation and management
 
-#![no_std]
 
 extern crate alloc;
 use alloc::collections::BTreeMap;

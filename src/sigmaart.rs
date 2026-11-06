@@ -3,7 +3,6 @@
 //! Provides comprehensive art and graphics management inspired by Art Craft.
 //! Supports canvas drawing, shape primitives, and color management.
 
-#![no_std]
 
 extern crate alloc;
 

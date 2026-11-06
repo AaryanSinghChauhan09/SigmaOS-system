@@ -5,7 +5,6 @@
 //!
 //! SigmaMQ provides system message queue functionality for SigmaOS, inspired by RabbitMQ/Kafka from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

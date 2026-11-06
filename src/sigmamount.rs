@@ -4,8 +4,8 @@
 //! including mount point configuration, mount options, automatic mounting,
 //! and mount table management.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

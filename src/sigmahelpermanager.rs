@@ -2,7 +2,6 @@
 // SigmaOS - Helper Manager
 // Helper command management inspired by Omarchy helper commands and Linux helper utilities
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};
@@ -44,7 +43,10 @@ impl SigmaHelperManager {
     pub fn search_helpers(&self, query: &str) -> Vec<&HelperCommand> {
         self.helpers
             .iter()
-            .filter(|h| h.name.contains(query) || h.description.contains(query))
+            .filter(|h| {
+            let q = query.to_lowercase();
+            h.name.to_lowercase().contains(&q) || h.description.to_lowercase().contains(&q)
+        })
             .collect()
     }
 }

@@ -3,7 +3,6 @@
 //! Provides comprehensive archive management inspired by Linux archive tools.
 //! Supports archive creation, extraction, and compression.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides comprehensive firewall management inspired by Linux iptables, nftables, and UFW.
 //! Supports rule management, chain management, policy enforcement, and network filtering.
 
-#![no_std]
 
 extern crate alloc;
 

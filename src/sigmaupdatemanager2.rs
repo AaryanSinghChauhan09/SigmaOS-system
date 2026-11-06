@@ -2,7 +2,6 @@
 // SigmaOS - Update Manager 2
 // Update management inspired by Omarchy update-* commands and Linux update systems
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

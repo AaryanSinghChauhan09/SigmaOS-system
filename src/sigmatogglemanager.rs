@@ -2,7 +2,6 @@
 // SigmaOS - Toggle Manager
 // Toggle management inspired by Omarchy toggle-* commands and Linux feature toggles
 
-#![no_std]
 extern crate alloc;
 
 use alloc::string::{String, ToString};

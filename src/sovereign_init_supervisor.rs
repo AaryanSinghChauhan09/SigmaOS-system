@@ -5,7 +5,6 @@
 //! socket-activated service startup, watchdog timeout monitoring, recursive dependency graph
 //! resolution, live reloading, and sd_notify protocol compatibility without systemd bloat.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -3,7 +3,6 @@
 //! Provides comprehensive film and video editing management inspired by Film Craft.
 //! Supports video clips, timeline editing, and media management.
 
-#![no_std]
 
 extern crate alloc;
 

@@ -2,7 +2,6 @@
 // Inspired by Ceph, GlusterFS, and MooseFS
 // Provides distributed storage across multiple nodes with replication and erasure coding
 
-#![allow(dead_code)]
 
 extern crate alloc;
 use alloc::string::String;

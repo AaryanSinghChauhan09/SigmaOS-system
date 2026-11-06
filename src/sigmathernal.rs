@@ -5,7 +5,6 @@
 //!
 //! SigmaThermal provides thermal management for SigmaOS, inspired by thermald and systemd-thermal from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

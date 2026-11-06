@@ -4,8 +4,8 @@
 //! comprehensive notification management including notification categories, priorities,
 //! persistence, and user interaction.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

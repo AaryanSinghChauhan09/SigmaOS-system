@@ -5,7 +5,6 @@
 //!
 //! SigmaUpdate provides system update management for SigmaOS, inspired by unattended-upgrades from Linux.
 
-#![no_std]
 extern crate alloc;
 
 use alloc::collections::BTreeMap;

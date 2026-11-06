@@ -3,8 +3,8 @@
 //! Inspired by Snap, this module provides Snap package management including
 //! sandboxed applications, snap channels, and Snap store integration.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};

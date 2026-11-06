@@ -3,7 +3,6 @@
 //! Provides comprehensive security management inspired by Arch, Debian, and CachyOS.
 //! Supports firewall rules, SELinux/AppArmor, security policies, and access control.
 
-#![no_std]
 
 extern crate alloc;
 

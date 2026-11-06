@@ -11,8 +11,8 @@
 //! - Capacity and threshold alerts
 //! - Global instance and convenience API
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::{String, ToString};
 use alloc::vec::Vec;

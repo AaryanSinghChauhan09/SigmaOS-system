@@ -4,8 +4,8 @@
 //! and repair capabilities including integrity verification, error detection,
 //! and automatic repair.
 
-#![no_std]
 
+extern crate alloc;
 use alloc::collections::BTreeMap;
 use alloc::string::String;
 use core::sync::atomic::{AtomicBool, Ordering};
@@ -276,7 +276,7 @@ impl SigmaFSCK {
 
     /// List results with errors
     pub fn list_results_with_errors(&self) -> Vec<&CheckResult> {
-        self.check_results.values().filter(|r| !r.clean).collect()
+        self.check_results.values().filter(|r| r.total_errors > 0).collect()
     }
 
     /// List results with critical errors

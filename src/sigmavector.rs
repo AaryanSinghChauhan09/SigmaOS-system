@@ -3,7 +3,6 @@
 //! Provides comprehensive vector graphics management inspired by Vector Craft.
 //! Supports vector paths, shapes, bezier curves, and SVG-like elements.
 
-#![no_std]
 
 extern crate alloc;
 

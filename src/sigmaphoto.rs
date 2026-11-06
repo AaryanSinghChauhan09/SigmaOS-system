@@ -3,7 +3,6 @@
 //! Provides comprehensive photo editing and management inspired by Photo Craft.
 //! Supports image processing, filters, adjustments, and photo organization.
 
-#![no_std]
 
 extern crate alloc;
 
