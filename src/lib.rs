@@ -103,7 +103,6 @@ pub mod sigmait;
 pub mod sigmajails;
 pub mod sigmakernelmanager;
 pub mod sigmakeyboardmanager;
-pub mod sigmalaunchmanager;
 pub mod sigmalight;
 pub mod sigmalogrotate;
 pub mod sigmalvm;
