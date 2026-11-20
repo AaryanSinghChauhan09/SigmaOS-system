@@ -77,7 +77,6 @@ pub mod sigmadesign;
 pub mod sigmadevice;
 pub mod sigmadevicemanager2;
 pub mod sigmadhcp;
-pub mod sigmadiskmanager;
 pub mod sigmadiskusage;
 pub mod sigmadisplaymanager;
 pub mod sigmadisplaymanager2;
