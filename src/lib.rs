@@ -199,7 +199,6 @@ pub mod sigmasysteminfo;
 pub mod sigmasystemmonitor;
 pub mod sigmasystemmonitor2;
 pub mod sigmasystemtools;
-pub mod sigmataskscheduler;
 pub mod sigmatemplatemanager;
 pub mod sigmathemeinstaller;
 pub mod sigmathememanager2;
