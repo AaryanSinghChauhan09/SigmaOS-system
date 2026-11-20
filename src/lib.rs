@@ -59,7 +59,6 @@ pub mod sigmaclipboardmanager;
 pub mod sigmacodec;
 pub mod sigmacolorscheme;
 pub mod sigmaconfig;
-pub mod sigmaconfigmanager;
 pub mod sigmacontainer;
 pub mod sigmacraftlibs;
 pub mod sigmacron;
