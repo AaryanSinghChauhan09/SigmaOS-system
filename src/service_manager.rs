@@ -2,6 +2,8 @@
 // Service management per Wiki 06-Networking.md and general system services
 // Provides systemd-style service management for SSH and other services
 
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
+
 use std::string::{String, ToString};
 use std::vec::Vec;
 
@@ -168,12 +170,14 @@ impl SystemService {
 #[derive(Debug, Clone)]
 pub struct SystemServiceManager {
     pub services: Vec<SystemService>,
+    ready: bool,
 }
 
 impl Default for SystemServiceManager {
     fn default() -> Self {
         SystemServiceManager {
             services: Vec::new(),
+            ready: false,
         }
     }
 }
@@ -437,6 +441,59 @@ impl SystemServiceManager {
     }
 }
 
+/// Shared lifecycle contract from `sigmaos-component-core` — the service
+/// manager is itself a supervised component: `init` brings it ready and
+/// auto-starts enabled services, `run` performs a supervision sweep,
+/// `shutdown` stops every running service.
+impl ComponentLifecycle for SystemServiceManager {
+    fn init(&mut self) -> ComponentResult<()> {
+        let autostart: Vec<String> = self
+            .services
+            .iter()
+            .filter(|s| s.config.auto_start && s.state == SystemServiceState::Stopped)
+            .map(|s| s.config.name.clone())
+            .collect();
+        for name in autostart {
+            let _ = self.start_service(&name);
+        }
+        self.ready = true;
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        let running = self
+            .services
+            .iter()
+            .filter(|s| s.state == SystemServiceState::Running)
+            .count();
+        let failed = self
+            .services
+            .iter()
+            .filter(|s| s.state == SystemServiceState::Failed)
+            .count();
+        log::info!("service supervision sweep: {running} running, {failed} failed");
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        let running: Vec<String> = self
+            .services
+            .iter()
+            .filter(|s| s.state == SystemServiceState::Running)
+            .map(|s| s.config.name.clone())
+            .collect();
+        for name in running {
+            let _ = self.stop_service(&name);
+        }
+        self.ready = false;
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.ready
+    }
+}
+
 #[cfg(test)]
 #[cfg(test)]
 mod tests {
@@ -648,5 +705,25 @@ mod tests {
         let mut manager = SystemServiceManager::new();
         assert!(manager.add_firewall_service().is_ok());
         assert_eq!(manager.services.len(), 1);
+    }
+
+    #[test]
+    fn test_lifecycle_init_run_shutdown() {
+        let mut manager = SystemServiceManager::new();
+        assert!(!manager.is_ready());
+
+        let config = SystemServiceConfig::new(
+            String::from("svc"),
+            String::from("Svc"),
+            String::from("/bin/true"),
+        );
+        manager.add_service(config).unwrap();
+
+        manager.init().unwrap();
+        assert!(manager.is_ready());
+        manager.run().unwrap();
+
+        manager.shutdown().unwrap();
+        assert!(!manager.is_ready());
     }
 }

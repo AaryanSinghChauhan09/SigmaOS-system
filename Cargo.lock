@@ -180,6 +180,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "sigmaos-component-core"
+version = "0.1.0"
+
+[[package]]
 name = "sigmaos-system"
 version = "0.1.0"
 dependencies = [
@@ -187,6 +191,7 @@ dependencies = [
  "env_logger",
  "log",
  "serde",
+ "sigmaos-component-core",
  "thiserror",
  "toml",
 ]
