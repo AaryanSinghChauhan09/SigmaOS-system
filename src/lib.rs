@@ -118,7 +118,6 @@ pub mod sigmakernelmanager;
 pub mod sigmakeyboardmanager;
 pub mod sigmalaunchmanager;
 pub mod sigmalight;
-pub mod sigmalogmanager;
 pub mod sigmalogrotate;
 pub mod sigmalogrotationmanager;
 pub mod sigmalvm;
