@@ -65,7 +65,6 @@ pub mod sigmacompressionmanager;
 pub mod sigmaconfig;
 pub mod sigmaconfigmanager;
 pub mod sigmacontainer;
-pub mod sigmacontainermanager;
 pub mod sigmacraftlibs;
 pub mod sigmacron;
 pub mod sigmacronmanager2;
