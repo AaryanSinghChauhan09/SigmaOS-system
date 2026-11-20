@@ -9,5 +9,5 @@ jobs:
       - run: cargo fetch
       - name: Build
         run: cargo build --release
-      - name: Test (FIRST: fast, isolated, repeatable, self-validating, timely)
+      - name: "Test (FIRST: fast, isolated, repeatable, self-validating, timely)"
         run: cargo test --release
