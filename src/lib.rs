@@ -140,7 +140,6 @@ pub mod sigmanetworkmanager3;
 pub mod sigmanetworkmonitor;
 pub mod sigmanfs;
 pub mod sigmanic;
-pub mod sigmanotificationmanager;
 pub mod sigmanotifyenhanced;
 pub mod sigmantp;
 pub mod sigmapackagemanager;
