@@ -9,6 +9,7 @@ use alloc::collections::BTreeMap;
 use alloc::string::{String, ToString};
 use alloc::vec::Vec;
 use core::sync::atomic::{AtomicBool, AtomicU32, Ordering};
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
 
 /// CPU statistics
 #[derive(Debug, Clone, Copy)]
@@ -247,6 +248,35 @@ impl SystemMonitor {
     }
 }
 
+/// Shared lifecycle contract from `sigmaos-component-core`. Readiness maps
+/// onto the existing `active` AtomicBool: `init` activates collection,
+/// `run` reports a stats snapshot, `shutdown` deactivates.
+impl ComponentLifecycle for SystemMonitor {
+    fn init(&mut self) -> ComponentResult<()> {
+        self.active.store(true, Ordering::Relaxed);
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        log::info!(
+            "system monitor sweep: cpu {:.1}% mem {:.1}% processes {}",
+            self.get_cpu_usage(),
+            self.get_memory_usage(),
+            self.processes.len()
+        );
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        self.active.store(false, Ordering::Relaxed);
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.active.load(Ordering::Relaxed)
+    }
+}
+
 impl Default for SystemMonitor {
     fn default() -> Self {
         Self::new()
@@ -312,5 +342,19 @@ mod tests {
         assert_eq!(top.len(), 2);
         assert_eq!(top[0].pid, 2);
         assert_eq!(top[1].pid, 3);
+    }
+
+    #[test]
+    fn test_component_lifecycle() {
+        let mut monitor = SystemMonitor::new();
+        // inherent init() returns (); use the trait method explicitly
+        assert!(!monitor.is_ready());
+        ComponentLifecycle::init(&mut monitor).unwrap();
+        assert!(monitor.is_ready());
+        monitor.run().unwrap();
+
+        monitor.shutdown().unwrap();
+        assert!(!monitor.is_ready());
+        assert!(!monitor.is_active());
     }
 }
