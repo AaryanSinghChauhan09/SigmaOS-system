@@ -47,7 +47,6 @@ pub mod sigmaarchivemanager;
 pub mod sigmaart;
 pub mod sigmaaudiomanager2;
 pub mod sigmaauditmanager;
-pub mod sigmaautomation;
 pub mod sigmabluetoothmanager2;
 pub mod sigmacache;
 pub mod sigmacad;
