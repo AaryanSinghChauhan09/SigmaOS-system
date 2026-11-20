@@ -101,7 +101,6 @@ pub mod sigmaintegrity;
 pub mod sigmaintegritymanager2;
 pub mod sigmait;
 pub mod sigmajails;
-pub mod sigmakernelmanager;
 pub mod sigmakeyboardmanager;
 pub mod sigmalight;
 pub mod sigmalogrotate;
