@@ -187,7 +187,6 @@ pub mod sigmasetupmanager2;
 pub mod sigmasmb;
 pub mod sigmasnap;
 pub mod sigmasnapshot;
-pub mod sigmasnapshotmanager;
 pub mod sigmasoftwaremanager;
 pub mod sigmasound;
 pub mod sigmassh;
