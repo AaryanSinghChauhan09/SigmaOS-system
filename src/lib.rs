@@ -124,7 +124,6 @@ pub mod sigmapdf;
 pub mod sigmaperformancemonitor;
 pub mod sigmaphoto;
 pub mod sigmapkg;
-pub mod sigmaports;
 pub mod sigmapower;
 pub mod sigmapowermanager;
 pub mod sigmapowermanager2;
