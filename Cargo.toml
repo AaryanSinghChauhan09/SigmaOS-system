@@ -17,6 +17,6 @@ log = "0.4"
 env_logger = "0.10"
 serde = { version = "1.0", features = ["derive"] }
 toml = "0.8"
-sigmaos-component-core = { path = "../SigmaOS-component-core" }
+sigmaos-component-core = { git = "https://github.com/AaryanSinghChauhan09/SigmaOS-component-core" }
 
 [dev-dependencies]
