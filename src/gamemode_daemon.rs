@@ -1,3 +1,5 @@
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
+
 #[derive(Debug, Clone, PartialEq)]
 pub enum CpuGovernor {
     Performance,
@@ -22,6 +24,7 @@ pub struct GameModeDaemon {
     pub current_governor: CpuGovernor,
     pub current_gpu_profile: GpuProfile,
     pub compositor_unredirect: bool,
+    ready: bool,
 }
 
 impl GameModeDaemon {
@@ -31,6 +34,7 @@ impl GameModeDaemon {
             current_governor: CpuGovernor::Schedutil,
             current_gpu_profile: GpuProfile::Auto,
             compositor_unredirect: false,
+            ready: false,
         }
     }
 
@@ -62,6 +66,37 @@ impl GameModeDaemon {
         self.current_governor = CpuGovernor::Schedutil;
         self.current_gpu_profile = GpuProfile::Auto;
         self.compositor_unredirect = false;
+    }
+}
+
+/// Shared lifecycle contract from `sigmaos-component-core`. The daemon is
+/// itself a component: `init` marks it ready, `run` reports client/governor
+/// state, `shutdown` disables gamemode and drops all clients.
+impl ComponentLifecycle for GameModeDaemon {
+    fn init(&mut self) -> ComponentResult<()> {
+        self.ready = true;
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        log::info!(
+            "gamemode daemon: {} clients, governor {:?}, unredirect {}",
+            self.active_clients.len(),
+            self.current_governor,
+            self.compositor_unredirect
+        );
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        self.active_clients.clear();
+        self.disable_gamemode();
+        self.ready = false;
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.ready
     }
 }
 
@@ -111,5 +146,21 @@ mod tests {
         daemon.unregister_client(1234);
         assert_eq!(daemon.active_clients.len(), 1);
         assert_eq!(daemon.current_governor, CpuGovernor::Performance); // Still in gamemode
+    }
+
+    #[test]
+    fn test_component_lifecycle() {
+        let mut daemon = GameModeDaemon::new();
+        daemon.register_client(1234);
+
+        assert!(!daemon.is_ready());
+        daemon.init().unwrap();
+        assert!(daemon.is_ready());
+        daemon.run().unwrap();
+
+        daemon.shutdown().unwrap();
+        assert!(!daemon.is_ready());
+        assert!(daemon.active_clients.is_empty());
+        assert_eq!(daemon.current_governor, CpuGovernor::Schedutil);
     }
 }
