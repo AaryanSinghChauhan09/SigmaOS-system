@@ -153,8 +153,6 @@ pub mod sigmarecovery;
 pub mod sigmarecovery2;
 pub mod sigmarefreshmanager;
 pub mod sigmaresource;
-pub mod sigmaresourcemanager;
-pub mod sigmarestoremanager;
 pub mod sigmascanner;
 pub mod sigmascheduledfsck;
 pub mod sigmaschedulermanager;
