@@ -3,7 +3,10 @@
 //! Scheduler management inspired by Linux Mint's scheduler and Omarchy's
 //! scheduler utilities, supporting task scheduling, cron jobs, and automation.
 
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
+
 use std::collections::HashMap;
+use std::time::{SystemTime, UNIX_EPOCH};
 
 /// Schedule frequency
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -115,6 +118,7 @@ impl ScheduledTask {
 pub struct SchedulerManager {
     tasks: HashMap<String, ScheduledTask>,
     next_task_id: u64,
+    ready: bool,
 }
 
 impl SchedulerManager {
@@ -122,6 +126,7 @@ impl SchedulerManager {
         let mut manager = Self {
             tasks: HashMap::new(),
             next_task_id: 1,
+            ready: false,
         };
 
         // Add default tasks
@@ -293,6 +298,43 @@ impl SchedulerManager {
     }
 }
 
+/// Shared lifecycle contract from `sigmaos-component-core`. `init` marks the
+/// scheduler ready once default tasks are registered, `run` performs a
+/// read-only sweep counting due tasks, `shutdown` clears readiness.
+impl ComponentLifecycle for SchedulerManager {
+    fn init(&mut self) -> ComponentResult<()> {
+        if self.tasks.is_empty() {
+            self.add_default_tasks();
+        }
+        self.ready = true;
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        let now = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .map_err(|e| sigmaos_component_core::ComponentError::Runtime(e.to_string()))?
+            .as_secs();
+        let due = self
+            .tasks
+            .values()
+            .filter(|t| t.is_enabled && t.next_run <= now)
+            .count();
+        let enabled = self.tasks.values().filter(|t| t.is_enabled).count();
+        log::info!("scheduler sweep: {enabled} enabled, {due} due");
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        self.ready = false;
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.ready
+    }
+}
+
 impl Default for SchedulerManager {
     fn default() -> Self {
         Self::new()
@@ -395,5 +437,16 @@ mod tests {
         let manager = SchedulerManager::new();
         let stats = manager.get_statistics();
         assert!(stats.total_tasks >= 4);
+    }
+
+    #[test]
+    fn test_component_lifecycle() {
+        let mut manager = SchedulerManager::new();
+        assert!(!manager.is_ready());
+        manager.init().unwrap();
+        assert!(manager.is_ready());
+        manager.run().unwrap();
+        manager.shutdown().unwrap();
+        assert!(!manager.is_ready());
     }
 }
