@@ -52,7 +52,6 @@ pub mod sigmacache;
 pub mod sigmacad;
 pub mod sigmacapturemanager;
 pub mod sigmacgroup;
-pub mod sigmaclipboardmanager;
 pub mod sigmacodec;
 pub mod sigmacolorscheme;
 pub mod sigmaconfig;
