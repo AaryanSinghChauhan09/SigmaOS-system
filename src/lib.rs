@@ -217,7 +217,6 @@ pub mod sigmatimeshift;
 pub mod sigmatogglemanager;
 pub mod sigmatrim;
 pub mod sigmaupdate;
-pub mod sigmaupdatemanager;
 pub mod sigmaupdatemanager2;
 pub mod sigmausbwriter;
 pub mod sigmausermanager;
