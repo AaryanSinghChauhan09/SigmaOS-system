@@ -7,6 +7,8 @@
 //! - s6: https://skarnet.org/software/s6/
 //! - Void Linux sv: https://docs.voidlinux.org/config/services/
 
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
+
 use std::collections::HashMap;
 
 /// Service state (mirrors runit's sv states)
@@ -67,6 +69,7 @@ pub struct RunitSupervisor {
     pub total_starts: u64,
     pub total_restarts: u64,
     pub total_failures: u64,
+    ready: bool,
 }
 
 impl RunitSupervisor {
@@ -76,6 +79,7 @@ impl RunitSupervisor {
             total_starts: 0,
             total_restarts: 0,
             total_failures: 0,
+            ready: false,
         }
     }
 
@@ -156,6 +160,48 @@ impl RunitSupervisor {
     }
 }
 
+/// Shared lifecycle contract from `sigmaos-component-core`. The supervisor
+/// is itself a component: `init` marks it ready, `run` performs a read-only
+/// supervision sweep over service states, `shutdown` stops every Up service.
+impl ComponentLifecycle for RunitSupervisor {
+    fn init(&mut self) -> ComponentResult<()> {
+        self.ready = true;
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        let up = self.running_count();
+        let exited = self
+            .services
+            .values()
+            .filter(|s| matches!(s.state, ServiceState::Exited(_)))
+            .count();
+        log::info!(
+            "runit supervision sweep: {up} up, {exited} exited, {} services",
+            self.services.len()
+        );
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        let up: Vec<String> = self
+            .services
+            .values()
+            .filter(|s| s.state == ServiceState::Up)
+            .map(|s| s.name.clone())
+            .collect();
+        for name in up {
+            let _ = self.stop(&name);
+        }
+        self.ready = false;
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.ready
+    }
+}
+
 impl Default for RunitSupervisor {
     fn default() -> Self {
         Self::new()
@@ -212,5 +258,21 @@ mod tests {
         sup.start("network").unwrap();
         sup.start("nginx").unwrap();
         assert_eq!(sup.running_count(), 2);
+    }
+
+    #[test]
+    fn test_component_lifecycle() {
+        let mut sup = RunitSupervisor::new();
+        sup.add_service(ServiceDef::new("sshd", "/usr/sbin/sshd -D"));
+        sup.start("sshd").unwrap();
+
+        assert!(!sup.is_ready());
+        sup.init().unwrap();
+        assert!(sup.is_ready());
+        sup.run().unwrap();
+
+        sup.shutdown().unwrap();
+        assert!(!sup.is_ready());
+        assert_eq!(sup.services["sshd"].state, ServiceState::Down);
     }
 }
