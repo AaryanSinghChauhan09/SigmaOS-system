@@ -85,7 +85,6 @@ pub mod sigmadns;
 pub mod sigmadnsmanager2;
 pub mod sigmadrivermanager;
 pub mod sigmaeffect;
-pub mod sigmaencryptionmanager;
 pub mod sigmaenvironmentmanager;
 pub mod sigmaevent;
 pub mod sigmafig;
