@@ -98,7 +98,6 @@ impl Default for OmarchyAtreyuSystemPlugin {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

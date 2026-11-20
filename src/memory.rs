@@ -720,7 +720,6 @@ impl Default for SovereignFiftyPercentRamRuleEngine {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests_50_percent_ram {
     use super::*;
 

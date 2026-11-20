@@ -163,7 +163,6 @@ impl Default for RunitSupervisor {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -144,7 +144,6 @@ impl Default for SovereignAutomationEngine {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

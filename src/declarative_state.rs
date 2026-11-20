@@ -183,7 +183,6 @@ impl Default for SystemState {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

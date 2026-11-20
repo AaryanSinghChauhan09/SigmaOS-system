@@ -127,7 +127,6 @@ impl OmarchyDockerRootlessEngine {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -495,7 +495,6 @@ impl ComponentLifecycle for SystemServiceManager {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 

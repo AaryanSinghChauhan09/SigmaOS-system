@@ -204,7 +204,6 @@ impl ScheduledSnapshotEngine {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::*;
 
