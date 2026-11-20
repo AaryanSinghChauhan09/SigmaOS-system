@@ -135,7 +135,6 @@ pub mod sigmamq;
 pub mod sigmananny;
 pub mod sigmanetwork;
 pub mod sigmanetworkmanager3;
-pub mod sigmanetworkmonitor;
 pub mod sigmanfs;
 pub mod sigmanic;
 pub mod sigmanotifyenhanced;
