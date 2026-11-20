@@ -133,7 +133,6 @@ pub mod sigmaprinter;
 pub mod sigmaprivilegemanager;
 pub mod sigmaprocess;
 pub mod sigmaprocessmanager;
-pub mod sigmaprocessmonitor;
 pub mod sigmaprofilemanager;
 pub mod sigmaproxy;
 pub mod sigmaquickshell;
