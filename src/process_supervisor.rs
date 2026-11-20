@@ -3,6 +3,8 @@ use std::vec;
 // Linux/BSD distro-inspired process management
 // Handles process supervision, monitoring, and lifecycle management
 
+use sigmaos_component_core::{ComponentError, ComponentLifecycle, ComponentResult};
+
 use std::collections::BTreeMap;
 use std::string::String;
 use std::vec::Vec;
@@ -50,6 +52,7 @@ pub struct ProcessSupervisor {
     pub process_status: BTreeMap<String, ProcessStatus>,
     pub config_dir: String,
     pub run_dir: String,
+    ready: bool,
 }
 
 impl ProcessSupervisor {
@@ -59,6 +62,7 @@ impl ProcessSupervisor {
             process_status: BTreeMap::new(),
             config_dir: String::from(config_dir),
             run_dir: String::from(run_dir),
+            ready: false,
         }
     }
 
@@ -240,6 +244,51 @@ impl ProcessSupervisor {
     }
 }
 
+/// Shared lifecycle contract from `sigmaos-component-core`. The supervisor
+/// is itself a component: `init` initialises and marks ready, `run` performs
+/// a read-only supervision sweep, `shutdown` stops every running process.
+impl ComponentLifecycle for ProcessSupervisor {
+    fn init(&mut self) -> ComponentResult<()> {
+        self.initialize()
+            .map_err(|e| ComponentError::Runtime(format!("{e:?}")))?;
+        self.ready = true;
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        let running = self
+            .process_status
+            .values()
+            .filter(|s| s.state == ProcessState::Running)
+            .count();
+        let failed = self
+            .process_status
+            .values()
+            .filter(|s| s.state == ProcessState::Failed)
+            .count();
+        log::info!("process supervision sweep: {running} running, {failed} failed");
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        let running: Vec<String> = self
+            .process_status
+            .iter()
+            .filter(|(_, s)| s.state == ProcessState::Running)
+            .map(|(n, _)| n.clone())
+            .collect();
+        for name in running {
+            let _ = self.stop_process(&name);
+        }
+        self.ready = false;
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.ready
+    }
+}
+
 /// Supervisor errors
 #[derive(Debug)]
 pub enum SupervisorError {
@@ -296,5 +345,25 @@ mod tests {
 
         let running = supervisor.get_running_processes();
         assert_eq!(running.len(), 2);
+    }
+
+    #[test]
+    fn test_component_lifecycle() {
+        let mut supervisor = ProcessSupervisor::new("/etc/supervisor", "/var/run/supervisor");
+        supervisor.create_default_processes().unwrap();
+        supervisor.start_process("sshd").unwrap();
+
+        assert!(!supervisor.is_ready());
+        supervisor.init().unwrap();
+        assert!(supervisor.is_ready());
+        supervisor.run().unwrap();
+
+        supervisor.shutdown().unwrap();
+        assert!(!supervisor.is_ready());
+        // shutdown stopped the running process
+        assert_eq!(
+            supervisor.get_process_status("sshd").unwrap().state,
+            ProcessState::Stopped
+        );
     }
 }
