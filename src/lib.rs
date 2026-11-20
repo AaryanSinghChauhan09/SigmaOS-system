@@ -95,7 +95,6 @@ pub mod sigmafilesystemmanager;
 pub mod sigmafilewatcher;
 pub mod sigmafilm;
 pub mod sigmafirewall;
-pub mod sigmafirewallmanager2;
 pub mod sigmaflatpak;
 pub mod sigmafont;
 pub mod sigmafs;
