@@ -185,7 +185,6 @@ pub mod sigmasearch;
 pub mod sigmasecurityaudit;
 pub mod sigmasecuritymanager;
 pub mod sigmasecuritymanager2;
-pub mod sigmaservice;
 pub mod sigmaservicemanager3;
 pub mod sigmaservicemanager4;
 pub mod sigmasession;
