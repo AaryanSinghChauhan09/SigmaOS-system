@@ -180,7 +180,6 @@ pub mod sigmathernal;
 pub mod sigmatime;
 pub mod sigmatimer;
 pub mod sigmatimeshift;
-pub mod sigmatogglemanager;
 pub mod sigmatrim;
 pub mod sigmaupdate;
 pub mod sigmausbwriter;
