@@ -208,7 +208,6 @@ pub mod sigmasystemtools;
 pub mod sigmataskscheduler;
 pub mod sigmatemplatemanager;
 pub mod sigmathemeinstaller;
-pub mod sigmathememanager;
 pub mod sigmathememanager2;
 pub mod sigmathernal;
 pub mod sigmatime;
