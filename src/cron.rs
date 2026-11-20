@@ -2,6 +2,8 @@ use std::format;
 // SigmaOS Cron Daemon - Linux-inspired task scheduler
 // Zero-dependency implementation of cron-like functionality
 
+use sigmaos_component_core::{ComponentLifecycle, ComponentResult};
+
 use std::collections::BTreeMap;
 use std::string::{String, ToString};
 use std::vec::Vec;
@@ -312,6 +314,36 @@ impl CronDaemon {
         let job = self.jobs.get_mut(&key).ok_or(CronError::JobNotFound)?;
         job.enabled = false;
         Ok(())
+    }
+}
+
+/// Shared lifecycle contract from `sigmaos-component-core`. Readiness maps
+/// onto the daemon's `running` flag: `init` starts it, `run` reports job
+/// counts, `shutdown` stops it.
+impl ComponentLifecycle for CronDaemon {
+    fn init(&mut self) -> ComponentResult<()> {
+        self.start();
+        Ok(())
+    }
+
+    fn run(&self) -> ComponentResult<()> {
+        let enabled = self.jobs.values().filter(|j| j.enabled).count();
+        log::info!(
+            "cron daemon sweep: {} jobs, {} enabled, running={}",
+            self.jobs.len(),
+            enabled,
+            self.running
+        );
+        Ok(())
+    }
+
+    fn shutdown(&mut self) -> ComponentResult<()> {
+        self.stop();
+        Ok(())
+    }
+
+    fn is_ready(&self) -> bool {
+        self.running
     }
 }
 
@@ -786,6 +818,17 @@ mod tests {
         assert_eq!(daemon.list_jobs().len(), 1);
         daemon.remove_job("test-job").unwrap();
         assert_eq!(daemon.list_jobs().len(), 0);
+    }
+
+    #[test]
+    fn test_cron_daemon_component_lifecycle() {
+        let mut daemon = CronDaemon::new();
+        assert!(!daemon.is_ready());
+        daemon.init().unwrap();
+        assert!(daemon.is_ready());
+        daemon.run().unwrap();
+        daemon.shutdown().unwrap();
+        assert!(!daemon.is_ready());
     }
 
     #[test]
