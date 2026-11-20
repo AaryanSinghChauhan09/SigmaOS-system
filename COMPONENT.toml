@@ -1,8 +1,16 @@
 [component]
 name = "SigmaOS-system"
-version = "0.1.0"
-maturity = "alpha"
 tier = 1
-owner = "SigmaOS Team"
-purpose = "Base system orchestration, process supervision, and resource management"
-dependencies = ["SigmaOS-kernel", "SigmaOS-core", "SigmaOS-init"]
+stability = "implemented"
+language = "rust"
+description = "Base system orchestration, process supervision, and resource management"
+upstream = []
+
+[contract]
+provides = ["component"]
+depends_on = ["SigmaOS-kernel"]
+
+[maturity]
+status = "Implemented"
+test_evidence = "cargo test --release green in CI"
+next_milestone = "Continue monolith module extraction into dedicated component repos"
