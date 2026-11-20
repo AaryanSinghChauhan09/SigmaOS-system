@@ -110,7 +110,6 @@ pub mod sigmalight;
 pub mod sigmalogrotate;
 pub mod sigmalvm;
 pub mod sigmamail;
-pub mod sigmamenumanager;
 pub mod sigmamicrophone;
 pub mod sigmamigrationmanager;
 pub mod sigmamkfs;
