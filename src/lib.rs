@@ -120,7 +120,6 @@ pub mod sigmantp;
 pub mod sigmapackagemanager;
 pub mod sigmapackagemanager2;
 pub mod sigmapackagemanager3;
-pub mod sigmapackageupdates;
 pub mod sigmaparted;
 pub mod sigmapathmanager;
 pub mod sigmapdf;
