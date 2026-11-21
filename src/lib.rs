@@ -134,7 +134,6 @@ pub mod sigmatimeshift;
 pub mod sigmatrim;
 pub mod sigmaupdate;
 pub mod sigmausbwriter;
-pub mod sigmausermanager;
 pub mod sigmavirtualization;
 pub mod sigmawalker;
 pub mod sigmawallpaper;
