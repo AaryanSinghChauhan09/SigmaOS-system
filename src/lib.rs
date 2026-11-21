@@ -57,7 +57,6 @@ pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
 pub mod sigmadns;
 pub mod sigmaenvironmentmanager;
-pub mod sigmafig;
 pub mod sigmafilewatcher;
 pub mod sigmafirewall;
 pub mod sigmafsck;
