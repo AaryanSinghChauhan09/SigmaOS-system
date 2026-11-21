@@ -46,7 +46,6 @@ pub mod sigmacapturemanager;
 pub mod sigmadisplaymanager2;
 pub mod sigmaenvironmentmanager;
 pub mod sigmafilewatcher;
-pub mod sigmafsck;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
 pub mod sigmahwmon;
