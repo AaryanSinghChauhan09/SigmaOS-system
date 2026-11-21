@@ -103,7 +103,6 @@ pub mod sigmanfs;
 pub mod sigmanic;
 pub mod sigmanotifyenhanced;
 pub mod sigmapackagemanager;
-pub mod sigmapackagemanager2;
 pub mod sigmapackagemanager3;
 pub mod sigmaparted;
 pub mod sigmapathmanager;
