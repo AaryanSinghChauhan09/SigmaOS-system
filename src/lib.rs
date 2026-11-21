@@ -78,7 +78,6 @@ pub mod sigmasessionmanager;
 pub mod sigmasetupmanager2;
 pub mod sigmastoragemanager;
 pub mod sigmatemplatemanager;
-pub mod sigmathemeinstaller;
 pub mod sigmathememanager2;
 pub mod sigmathernal;
 pub mod sigmatime;
