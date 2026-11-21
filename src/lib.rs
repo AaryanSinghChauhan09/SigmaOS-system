@@ -72,7 +72,6 @@ pub mod sigmatemplatemanager;
 pub mod sigmathememanager2;
 pub mod sigmathernal;
 pub mod sigmatime;
-pub mod sigmausbwriter;
 pub mod sigmawizardmanager;
 pub mod signamespaces;
 pub mod snapshot;
