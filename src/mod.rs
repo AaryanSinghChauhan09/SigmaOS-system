@@ -970,6 +970,6 @@ pub use sigmapackageupdates::{
 };
 
 pub use sigmasecuritymanager::{
-    add_firewall_rule, get_sigmasecuritymanager, get_sigmasecuritymanager_mut,
+    add_firewall_rule, get_sigmasecuritymanager,
     init_sigmasecuritymanager, SigmaSecurityManager,
 };

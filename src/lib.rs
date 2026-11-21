@@ -127,7 +127,6 @@ pub mod sigmarecovery2;
 pub mod sigmaresource;
 pub mod sigmascheduledfsck;
 pub mod sigmaschedulermanager;
-pub mod sigmasecuritymanager;
 pub mod sigmasecuritymanager2;
 pub mod sigmaservicemanager4;
 pub mod sigmasessionmanager;
