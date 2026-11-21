@@ -564,7 +564,7 @@ pub use sigmananny::{
     FilterRule, SigmaNanny, TimeLimit, TimeLimitType, UsageRecord,
 };
 pub use sigmanetwork::{
-    add_interface, get_sigmanetwork, get_sigmanetwork_mut, init_sigmanetwork, ConnectionType,
+    add_interface, get_sigmanetwork, init_sigmanetwork, ConnectionType,
     InterfaceState, NetworkConnection, NetworkInterface, SigmaNetwork,
 };
 pub use sigmanfs::{

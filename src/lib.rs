@@ -98,7 +98,6 @@ pub mod sigmamonitor;
 pub mod sigmamount;
 pub mod sigmamq;
 pub mod sigmananny;
-pub mod sigmanetwork;
 pub mod sigmanetworkmanager3;
 pub mod sigmanfs;
 pub mod sigmanic;
