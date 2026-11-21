@@ -39,7 +39,6 @@ pub mod settings_manager;
 pub mod shredder;
 pub mod sigmaaliasmanager;
 pub mod sigmaananicy;
-pub mod sigmaani;
 pub mod sigmaapplicationmanager;
 pub mod sigmaart;
 pub mod sigmaaudiomanager2;
