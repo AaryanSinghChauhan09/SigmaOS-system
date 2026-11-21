@@ -137,7 +137,6 @@ pub mod sigmaschedulermanager;
 pub mod sigmasecurityaudit;
 pub mod sigmasecuritymanager;
 pub mod sigmasecuritymanager2;
-pub mod sigmaservicemanager3;
 pub mod sigmaservicemanager4;
 pub mod sigmasessionmanager;
 pub mod sigmasetupmanager2;
