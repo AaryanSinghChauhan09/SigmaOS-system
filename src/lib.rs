@@ -67,7 +67,6 @@ pub mod sigmafig;
 pub mod sigmafilewatcher;
 pub mod sigmafilm;
 pub mod sigmafirewall;
-pub mod sigmaflatpak;
 pub mod sigmafsck;
 pub mod sigmafsmon;
 pub mod sigmaftp;
