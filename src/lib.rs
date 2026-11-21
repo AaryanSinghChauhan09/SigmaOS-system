@@ -90,7 +90,6 @@ pub mod sigmaprinter;
 pub mod sigmaprivilegemanager;
 pub mod sigmaprocessmanager;
 pub mod sigmaprofilemanager;
-pub mod sigmaproxy;
 pub mod sigmaquickshell;
 pub mod sigmaquota;
 pub mod sigmaraid;
