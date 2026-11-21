@@ -117,7 +117,6 @@ pub mod sigmapackagemanager3;
 pub mod sigmaparted;
 pub mod sigmapathmanager;
 pub mod sigmapdf;
-pub mod sigmaperformancemonitor;
 pub mod sigmaphoto;
 pub mod sigmapkg;
 pub mod sigmapower;
