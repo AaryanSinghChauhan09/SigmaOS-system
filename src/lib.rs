@@ -142,7 +142,6 @@ pub mod sigmathemeinstaller;
 pub mod sigmathememanager2;
 pub mod sigmathernal;
 pub mod sigmatime;
-pub mod sigmatimer;
 pub mod sigmatimeshift;
 pub mod sigmatrim;
 pub mod sigmaupdate;
