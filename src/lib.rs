@@ -56,7 +56,6 @@ pub mod sigmacron;
 pub mod sigmacrypto;
 pub mod sigmadb;
 pub mod sigmadeck;
-pub mod sigmadefrag;
 pub mod sigmadevice;
 pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
