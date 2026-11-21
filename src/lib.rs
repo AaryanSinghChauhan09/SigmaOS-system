@@ -72,7 +72,6 @@ pub mod sigmamail;
 pub mod sigmamigrationmanager;
 pub mod sigmamkfs;
 pub mod sigmamount;
-pub mod sigmamq;
 pub mod sigmananny;
 pub mod sigmanetworkmanager3;
 pub mod sigmanfs;
