@@ -66,7 +66,6 @@ pub mod sigmamkfs;
 pub mod sigmamount;
 pub mod sigmananny;
 pub mod sigmanetworkmanager3;
-pub mod sigmanfs;
 pub mod sigmanotifyenhanced;
 pub mod sigmapackagemanager;
 pub mod sigmapackagemanager3;
