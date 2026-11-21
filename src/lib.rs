@@ -110,7 +110,6 @@ pub mod sigmaproxy;
 pub mod sigmaquickshell;
 pub mod sigmaquota;
 pub mod sigmaraid;
-pub mod sigmarecovery;
 pub mod sigmarecovery2;
 pub mod sigmaresource;
 pub mod sigmaschedulermanager;
