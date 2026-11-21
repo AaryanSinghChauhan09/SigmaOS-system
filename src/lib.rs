@@ -76,7 +76,6 @@ pub mod sigmahwmon;
 pub mod sigmainstaller;
 pub mod sigmainstallmanager;
 pub mod sigmaintegrity;
-pub mod sigmait;
 pub mod sigmalvm;
 pub mod sigmamail;
 pub mod sigmamigrationmanager;
