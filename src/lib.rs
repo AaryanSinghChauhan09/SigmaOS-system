@@ -49,7 +49,6 @@ pub mod sigmafilewatcher;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
 pub mod sigmainstallmanager;
-pub mod sigmalvm;
 pub mod sigmamigrationmanager;
 pub mod sigmanetworkmanager3;
 pub mod sigmapackagemanager3;
