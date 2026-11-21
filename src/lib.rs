@@ -37,7 +37,6 @@ pub mod scheduler_manager;
 pub mod service_manager;
 pub mod settings_manager;
 pub mod shredder;
-pub mod sigmaacpi;
 pub mod sigmaaliasmanager;
 pub mod sigmaananicy;
 pub mod sigmaani;
