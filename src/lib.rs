@@ -52,7 +52,6 @@ pub mod sigmadistfs;
 pub mod sigmaenvironmentmanager;
 pub mod sigmafilewatcher;
 pub mod sigmafsck;
-pub mod sigmafsmon;
 pub mod sigmaftp;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
