@@ -87,7 +87,6 @@ pub mod sigmamq;
 pub mod sigmananny;
 pub mod sigmanetworkmanager3;
 pub mod sigmanfs;
-pub mod sigmanic;
 pub mod sigmanotifyenhanced;
 pub mod sigmapackagemanager;
 pub mod sigmapackagemanager3;
