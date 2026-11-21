@@ -97,7 +97,6 @@ pub mod sigmalight;
 pub mod sigmalogrotate;
 pub mod sigmalvm;
 pub mod sigmamail;
-pub mod sigmamicrophone;
 pub mod sigmamigrationmanager;
 pub mod sigmamkfs;
 pub mod sigmamonitor;
