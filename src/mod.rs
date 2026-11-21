@@ -532,7 +532,7 @@ pub use sigmait::{
     SigmaAudit,
 };
 pub use sigmalight::{
-    add_light, get_sigmalight, get_sigmalight_mut, init_sigmalight, ColorTemperature, LightSource,
+    add_light, get_sigmalight, init_sigmalight, ColorTemperature, LightSource,
     LightType, LightingScene, SigmaLight,
 };
 pub use sigmalogrotate::{
