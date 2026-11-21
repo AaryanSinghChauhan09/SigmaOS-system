@@ -105,7 +105,6 @@ pub mod sigmapowermanager2;
 pub mod sigmaprint2;
 pub mod sigmaprinter;
 pub mod sigmaprivilegemanager;
-pub mod sigmaprocess;
 pub mod sigmaprocessmanager;
 pub mod sigmaprofilemanager;
 pub mod sigmaproxy;
