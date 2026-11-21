@@ -45,7 +45,6 @@ pub mod sigmaauditmanager;
 pub mod sigmabluetoothmanager2;
 pub mod sigmacapturemanager;
 pub mod sigmacgroup;
-pub mod sigmacodec;
 pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
 pub mod sigmaenvironmentmanager;
