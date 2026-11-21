@@ -53,7 +53,6 @@ pub mod sigmadistfs;
 pub mod sigmadns;
 pub mod sigmaenvironmentmanager;
 pub mod sigmafilewatcher;
-pub mod sigmafirewall;
 pub mod sigmafsck;
 pub mod sigmafsmon;
 pub mod sigmaftp;
