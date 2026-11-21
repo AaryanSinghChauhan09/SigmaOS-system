@@ -68,7 +68,6 @@ pub mod sigmasetupmanager2;
 pub mod sigmastoragemanager;
 pub mod sigmatemplatemanager;
 pub mod sigmathememanager2;
-pub mod sigmatime;
 pub mod sigmawizardmanager;
 pub mod signamespaces;
 pub mod snapshot;
