@@ -71,7 +71,6 @@ pub mod sigmaflatpak;
 pub mod sigmafsck;
 pub mod sigmafsmon;
 pub mod sigmaftp;
-pub mod sigmagrid;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
 pub mod sigmahttp;
