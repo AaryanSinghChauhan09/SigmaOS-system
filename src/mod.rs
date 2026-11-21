@@ -954,7 +954,7 @@ pub use sigmapowermanager::{
 };
 
 pub use sigmakeyboardmanager::{
-    add_layout, get_sigmakeyboardmanager, get_sigmakeyboardmanager_mut, init_sigmakeyboardmanager,
+    add_layout, get_sigmakeyboardmanager, init_sigmakeyboardmanager,
     InputMethod, KeyboardLayout, KeyboardSettings, SigmaKeyboardManager,
 };
 

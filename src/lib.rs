@@ -87,7 +87,6 @@ pub mod sigmainstaller;
 pub mod sigmainstallmanager;
 pub mod sigmaintegrity;
 pub mod sigmait;
-pub mod sigmakeyboardmanager;
 pub mod sigmalogrotate;
 pub mod sigmalvm;
 pub mod sigmamail;
