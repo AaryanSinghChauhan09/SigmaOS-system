@@ -446,7 +446,7 @@ pub use sigmadeck::{
     SlideElement, SlideElementType, SlideTransition,
 };
 pub use sigmadesign::{
-    add_design_system, get_sigmadesign, get_sigmadesign_mut, init_sigmadesign, ComponentSize,
+    add_design_system, get_sigmadesign, init_sigmadesign, ComponentSize,
     ComponentVariant, DesignSystem, DesignToken, SigmaDesign, TokenType, TokenValue, UIComponent,
 };
 pub use sigmadevice::{

@@ -59,7 +59,6 @@ pub mod sigmacrypto;
 pub mod sigmadb;
 pub mod sigmadeck;
 pub mod sigmadefrag;
-pub mod sigmadesign;
 pub mod sigmadevice;
 pub mod sigmadhcp;
 pub mod sigmadisplaymanager2;
