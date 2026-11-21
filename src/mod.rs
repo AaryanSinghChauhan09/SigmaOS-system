@@ -649,10 +649,6 @@ pub use sigmasnap::{
 pub use sigmasound::{
     get_sigmasound, get_sigmasound_mut, init_sigmasound, AudioDeviceState, SigmaSound,
 };
-pub use sigmassh::{
-    authenticate_ssh_connection, get_sigmassh, init_sigmassh, SigmaSSH, SshAuthMethod,
-    SshConnection, SshConnectionState,
-};
 pub use sigmastorage::{
     get_sigmastorage, init_sigmastorage, mount_storage_volume, SigmaStorage, StorageVolume,
     VolumeState,
