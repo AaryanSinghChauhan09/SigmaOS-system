@@ -175,7 +175,6 @@ pub mod sigmavirtualization;
 pub mod sigmavoice;
 pub mod sigmawalker;
 pub mod sigmawallpaper;
-pub mod sigmawebcam;
 pub mod sigmawizardmanager;
 pub mod sigmaword;
 pub mod signamespaces;
