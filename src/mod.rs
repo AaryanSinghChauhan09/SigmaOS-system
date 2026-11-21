@@ -539,9 +539,6 @@ pub use sigmalvm::{
     create_volume_group, get_sigmalvm, init_sigmalvm, LVState, LogicalVolume, PVState,
     PhysicalVolume, SigmaLVM, VGState, VolumeGroup,
 };
-pub use sigmamail::{
-    get_sigmamail, init_sigmamail, send_mail_message, MailMessage, MailMessageState, SigmaMail,
-};
 pub use sigmamkfs::{
     create_filesystem, get_sigmamkfs, init_sigmamkfs, Filesystem, FilesystemConfig,
     FilesystemState, SigmaMkfs,
