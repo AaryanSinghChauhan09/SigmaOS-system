@@ -97,7 +97,6 @@ pub mod sigmathemeinstaller;
 pub mod sigmathememanager2;
 pub mod sigmathernal;
 pub mod sigmatime;
-pub mod sigmatimeshift;
 pub mod sigmatrim;
 pub mod sigmaupdate;
 pub mod sigmausbwriter;
