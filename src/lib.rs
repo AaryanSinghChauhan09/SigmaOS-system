@@ -161,7 +161,6 @@ pub mod sigmausbwriter;
 pub mod sigmausermanager;
 pub mod sigmavector;
 pub mod sigmavirtualization;
-pub mod sigmavoice;
 pub mod sigmawalker;
 pub mod sigmawallpaper;
 pub mod sigmawizardmanager;
