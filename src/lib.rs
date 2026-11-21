@@ -58,7 +58,6 @@ pub mod sigmadb;
 pub mod sigmadeck;
 pub mod sigmadefrag;
 pub mod sigmadevice;
-pub mod sigmadhcp;
 pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
 pub mod sigmadns;
