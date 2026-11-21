@@ -64,7 +64,6 @@ pub mod sigmamount;
 pub mod sigmananny;
 pub mod sigmanetworkmanager3;
 pub mod sigmanotifyenhanced;
-pub mod sigmapackagemanager;
 pub mod sigmapackagemanager3;
 pub mod sigmapathmanager;
 pub mod sigmapowermanager2;
