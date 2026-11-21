@@ -934,7 +934,7 @@ pub use system_monitor::{
 };
 
 pub use sigmasystemtools::{
-    add_tool, get_sigmasystemtools, get_sigmasystemtools_mut, init_sigmasystemtools, CleanupAction,
+    add_tool, get_sigmasystemtools, init_sigmasystemtools, CleanupAction,
     MaintenanceTask, SigmaSystemTools, SystemTool, ToolCategory,
 };
 
