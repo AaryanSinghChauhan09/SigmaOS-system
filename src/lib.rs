@@ -138,7 +138,6 @@ pub mod sigmaresource;
 pub mod sigmascanner;
 pub mod sigmascheduledfsck;
 pub mod sigmaschedulermanager;
-pub mod sigmasearch;
 pub mod sigmasecurityaudit;
 pub mod sigmasecuritymanager;
 pub mod sigmasecuritymanager2;
