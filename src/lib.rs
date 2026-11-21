@@ -71,7 +71,6 @@ pub mod sigmanfs;
 pub mod sigmanotifyenhanced;
 pub mod sigmapackagemanager;
 pub mod sigmapackagemanager3;
-pub mod sigmaparted;
 pub mod sigmapathmanager;
 pub mod sigmapowermanager2;
 pub mod sigmaprivilegemanager;
