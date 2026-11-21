@@ -80,7 +80,6 @@ pub mod sigmasecuritymanager2;
 pub mod sigmaservicemanager4;
 pub mod sigmasessionmanager;
 pub mod sigmasetupmanager2;
-pub mod sigmasnapshot;
 pub mod sigmastoragemanager;
 pub mod sigmaswap;
 pub mod sigmatemplatemanager;
