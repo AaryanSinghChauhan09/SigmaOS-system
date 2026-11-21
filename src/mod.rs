@@ -427,8 +427,8 @@ pub use sigmaconfig::{
     ConfigValue, SigmaConfig,
 };
 pub use sigmacraftlibs::{
-    add_library, get_sigmacraftlibs, get_sigmacraftlibs_mut, init_sigmacraftlibs,
-    LibraryDependency, LibraryType, LibraryVersion, SharedLibrary, SigmaCraftLibs,
+    add_library, get_sigmacraftlibs, init_sigmacraftlibs, LibraryDependency, LibraryType,
+    LibraryVersion, SharedLibrary, SigmaCraftLibs,
 };
 pub use sigmacron::{
     create_job, get_sigmacron, get_sigmacron_mut, init_sigmacron, CronSpec, JobStatus,

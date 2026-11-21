@@ -54,7 +54,6 @@ pub mod sigmacodec;
 pub mod sigmacolorscheme;
 pub mod sigmaconfig;
 pub mod sigmacontainer;
-pub mod sigmacraftlibs;
 pub mod sigmacron;
 pub mod sigmacrypto;
 pub mod sigmadb;
