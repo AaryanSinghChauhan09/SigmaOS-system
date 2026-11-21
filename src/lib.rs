@@ -66,7 +66,6 @@ pub mod sigmafsmon;
 pub mod sigmaftp;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
-pub mod sigmahttp;
 pub mod sigmahwmon;
 pub mod sigmainstaller;
 pub mod sigmainstallmanager;
