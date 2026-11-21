@@ -59,7 +59,6 @@ pub mod sigmapowermanager2;
 pub mod sigmaprivilegemanager;
 pub mod sigmaprocessmanager;
 pub mod sigmaprofilemanager;
-pub mod sigmaraid;
 pub mod sigmaschedulermanager;
 pub mod sigmasecuritymanager2;
 pub mod sigmaservicemanager4;
