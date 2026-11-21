@@ -55,7 +55,6 @@ pub mod sigmahwmon;
 pub mod sigmainstallmanager;
 pub mod sigmalvm;
 pub mod sigmamigrationmanager;
-pub mod sigmamount;
 pub mod sigmananny;
 pub mod sigmanetworkmanager3;
 pub mod sigmanotifyenhanced;
