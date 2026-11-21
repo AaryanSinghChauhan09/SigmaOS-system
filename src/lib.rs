@@ -173,7 +173,6 @@ pub mod sigmavoice;
 pub mod sigmawalker;
 pub mod sigmawallpaper;
 pub mod sigmawizardmanager;
-pub mod sigmaword;
 pub mod signamespaces;
 pub mod snapshot;
 pub mod snapshot_schedule;
