@@ -508,7 +508,7 @@ pub use sigmagrid::{
     GridColumn, GridItem, GridRow, GridUnit, SigmaGrid,
 };
 pub use sigmahibernation::{
-    create_image, get_sigmahibernation, get_sigmahibernation_mut, init_sigmahibernation,
+    create_image, get_sigmahibernation, init_sigmahibernation,
     HibernationImage, HibernationMethod, HibernationState, PowerState, SigmaHibernation,
 };
 pub use sigmahttp::{

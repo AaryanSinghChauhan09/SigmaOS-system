@@ -79,7 +79,6 @@ pub mod sigmaftp;
 pub mod sigmagrid;
 pub mod sigmahardwareprofiler;
 pub mod sigmahelpermanager;
-pub mod sigmahibernation;
 pub mod sigmahttp;
 pub mod sigmahwmon;
 pub mod sigmainstaller;
