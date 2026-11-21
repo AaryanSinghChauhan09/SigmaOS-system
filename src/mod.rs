@@ -485,7 +485,7 @@ pub use sigmaflatpak::{
     FlatpakState, FlatpakType, SigmaFlatpak,
 };
 pub use sigmafont::{
-    add_font, get_sigmafont, get_sigmafont_mut, init_sigmafont, Font, FontStyle, FontWeight, Glyph,
+    add_font, get_sigmafont, init_sigmafont, Font, FontStyle, FontWeight, Glyph,
     SigmaFont, TextRun,
 };
 pub use sigmafs::{

@@ -73,7 +73,6 @@ pub mod sigmafilewatcher;
 pub mod sigmafilm;
 pub mod sigmafirewall;
 pub mod sigmaflatpak;
-pub mod sigmafont;
 pub mod sigmafs;
 pub mod sigmafsck;
 pub mod sigmafsmon;
