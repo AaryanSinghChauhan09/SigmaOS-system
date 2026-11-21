@@ -461,7 +461,7 @@ pub use sigmadns::{
     ResolverState, SigmaDNS,
 };
 pub use sigmaeffect::{
-    add_effect, get_sigmaeffect, get_sigmaeffect_mut, init_sigmaeffect, Effect, EffectChain,
+    add_effect, get_sigmaeffect, init_sigmaeffect, Effect, EffectChain,
     EffectParameter, EffectPreset, EffectType, SigmaEffect,
 };
 pub use sigmaevent::{

@@ -66,7 +66,6 @@ pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
 pub mod sigmadns;
 pub mod sigmadrivermanager;
-pub mod sigmaeffect;
 pub mod sigmaenvironmentmanager;
 pub mod sigmaevent;
 pub mod sigmafig;
