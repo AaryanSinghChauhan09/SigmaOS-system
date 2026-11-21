@@ -87,7 +87,6 @@ pub mod sigmasnapshot;
 pub mod sigmassh;
 pub mod sigmastoragemanager;
 pub mod sigmaswap;
-pub mod sigmasysteminfo;
 pub mod sigmatemplatemanager;
 pub mod sigmathemeinstaller;
 pub mod sigmathememanager2;
