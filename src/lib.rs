@@ -71,7 +71,6 @@ pub mod sigmaeffect;
 pub mod sigmaenvironmentmanager;
 pub mod sigmaevent;
 pub mod sigmafig;
-pub mod sigmafilesystemmanager;
 pub mod sigmafilewatcher;
 pub mod sigmafilm;
 pub mod sigmafirewall;
