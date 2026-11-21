@@ -949,7 +949,7 @@ pub use sigmadisplaymanager::{
 };
 
 pub use sigmapowermanager::{
-    add_profile, get_sigmapowermanager, get_sigmapowermanager_mut, init_sigmapowermanager,
+    add_profile, get_sigmapowermanager, init_sigmapowermanager,
     SigmaPowerManager,
 };
 
