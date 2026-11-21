@@ -149,7 +149,6 @@ pub mod sigmatrim;
 pub mod sigmaupdate;
 pub mod sigmausbwriter;
 pub mod sigmausermanager;
-pub mod sigmavector;
 pub mod sigmavirtualization;
 pub mod sigmawalker;
 pub mod sigmawallpaper;

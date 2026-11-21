@@ -695,7 +695,7 @@ pub use sigmausbwriter::{
     WriteState,
 };
 pub use sigmavector::{
-    add_layer, get_sigmavector, get_sigmavector_mut, init_sigmavector, LineCap, LineJoin,
+    add_layer, get_sigmavector, init_sigmavector, LineCap, LineJoin,
     PathSegment, SigmaVector, VectorElement, VectorElementType, VectorLayer, VectorPoint,
 };
 pub use sigmavoice::{
