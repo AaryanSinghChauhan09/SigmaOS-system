@@ -82,7 +82,6 @@ pub mod sigmaparted;
 pub mod sigmapathmanager;
 pub mod sigmapowermanager2;
 pub mod sigmaprint2;
-pub mod sigmaprinter;
 pub mod sigmaprivilegemanager;
 pub mod sigmaprocessmanager;
 pub mod sigmaprofilemanager;
