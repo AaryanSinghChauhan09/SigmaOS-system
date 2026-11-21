@@ -78,7 +78,6 @@ pub mod sigmaprofilemanager;
 pub mod sigmaquickshell;
 pub mod sigmaquota;
 pub mod sigmaraid;
-pub mod sigmarecovery2;
 pub mod sigmaschedulermanager;
 pub mod sigmasecuritymanager2;
 pub mod sigmaservicemanager4;
