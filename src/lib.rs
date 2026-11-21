@@ -154,7 +154,6 @@ pub mod sigmastoragemanager;
 pub mod sigmaswap;
 pub mod sigmasystemd;
 pub mod sigmasysteminfo;
-pub mod sigmasystemmonitor;
 pub mod sigmasystemtools;
 pub mod sigmatemplatemanager;
 pub mod sigmathemeinstaller;
