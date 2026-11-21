@@ -185,6 +185,17 @@ version = "0.1.0"
 source = "git+https://github.com/AaryanSinghChauhan09/SigmaOS-component-core#2bc35fcc41bb8003d95cbcc27b6eedcfaa12f22b"
 
 [[package]]
+name = "sigmaos-runtime-support"
+version = "0.1.0"
+source = "git+https://github.com/AaryanSinghChauhan09/SigmaOS-runtime-support#31334c373fbc3a7e9a0ac9326a27620b42743d8c"
+dependencies = [
+ "anyhow",
+ "log",
+ "serde",
+ "thiserror",
+]
+
+[[package]]
 name = "sigmaos-system"
 version = "0.1.0"
 dependencies = [
@@ -193,6 +204,7 @@ dependencies = [
  "log",
  "serde",
  "sigmaos-component-core",
+ "sigmaos-runtime-support",
  "thiserror",
  "toml",
 ]

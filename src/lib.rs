@@ -1,20 +1,14 @@
-pub mod config;
-pub mod crypto;
-pub mod klib;
-pub mod error;
-pub mod orchestrator;
-pub mod service;
+//! SigmaOS-system — connector crate.
+//!
+//! All implementation modules have been extracted into dedicated
+//! `SigmaOS-*` component repositories. This crate retains only the
+//! `SystemComponent` lifecycle facade, re-exporting shared primitives
+//! from `sigmaos-runtime-support`.
 
-pub mod boot_analyzer;
-pub mod logrotate;
-pub mod mint_tools;
-pub mod monitor;
-pub mod network_manager;
-pub mod preload;
-pub mod signamespaces;
-pub mod state;
-pub mod system_monitor;
-pub mod task_scheduler;
+pub use sigmaos_runtime_support::config;
+pub use sigmaos_runtime_support::error;
+pub use sigmaos_runtime_support::orchestrator;
+pub use sigmaos_runtime_support::service;
 
 pub use config::Config;
 pub use error::{ComponentError, Result};
