@@ -791,10 +791,6 @@ pub use sigma3d::{
     add_model, get_sigma3d, get_sigma3d_mut, init_sigma3d, Model3D, RenderState, Scene, Sigma3D,
 };
 
-pub use sigmaupdate::{
-    apply_system_update, get_sigmaupdate, init_sigmaupdate, SigmaUpdate, SystemUpdate,
-    UpdatePolicy, UpdateStatus,
-};
 pub use snapshot::{
     FileSnapshotStorage, MerkleSnapshotStorage, RestoreResult, SnapshotConfig, SnapshotError,
     SnapshotMetadata, SnapshotResult, SnapshotStorage, SystemSnapshotManager,
