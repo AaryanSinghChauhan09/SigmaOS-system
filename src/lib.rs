@@ -42,7 +42,6 @@ pub mod sigmaaliasmanager;
 pub mod sigmaananicy;
 pub mod sigmaani;
 pub mod sigmaapplicationmanager;
-pub mod sigmaarchivemanager;
 pub mod sigmaart;
 pub mod sigmaaudiomanager2;
 pub mod sigmaauditmanager;
