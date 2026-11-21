@@ -47,7 +47,6 @@ pub mod sigmacapturemanager;
 pub mod sigmacgroup;
 pub mod sigmacodec;
 pub mod sigmacolorscheme;
-pub mod sigmacron;
 pub mod sigmadevice;
 pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
