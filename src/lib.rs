@@ -97,7 +97,6 @@ pub mod sigmatime;
 pub mod sigmatrim;
 pub mod sigmaupdate;
 pub mod sigmausbwriter;
-pub mod sigmavirtualization;
 pub mod sigmawalker;
 pub mod sigmawallpaper;
 pub mod sigmawizardmanager;
