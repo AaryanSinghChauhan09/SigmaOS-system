@@ -145,7 +145,6 @@ pub mod sigmasessionmanager;
 pub mod sigmasetupmanager2;
 pub mod sigmasmb;
 pub mod sigmasnapshot;
-pub mod sigmasound;
 pub mod sigmassh;
 pub mod sigmastorage;
 pub mod sigmastoragemanager;
