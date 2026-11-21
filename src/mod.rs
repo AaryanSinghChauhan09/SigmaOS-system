@@ -456,10 +456,6 @@ pub use sigmadevice::{
 pub use sigmadhcp::{
     get_sigmadhcp, init_sigmadhcp, request_dhcp_lease, DhcpLease, DhcpState, SigmaDHCP,
 };
-pub use sigmadns::{
-    activate_dns_server, get_sigmadns, init_sigmadns, DnsCacheEntry, DnsRecordType, DnsServer,
-    ResolverState, SigmaDNS,
-};
 pub use sigmaeffect::{
     add_effect, get_sigmaeffect, init_sigmaeffect, Effect, EffectChain,
     EffectParameter, EffectPreset, EffectType, SigmaEffect,
