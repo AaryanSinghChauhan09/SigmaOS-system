@@ -52,7 +52,6 @@ pub mod sigmacolorscheme;
 pub mod sigmacontainer;
 pub mod sigmacron;
 pub mod sigmacrypto;
-pub mod sigmadb;
 pub mod sigmadevice;
 pub mod sigmadisplaymanager2;
 pub mod sigmadistfs;
