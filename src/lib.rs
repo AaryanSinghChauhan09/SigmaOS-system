@@ -40,7 +40,6 @@ pub mod shredder;
 pub mod sigmaaliasmanager;
 pub mod sigmaananicy;
 pub mod sigmaapplicationmanager;
-pub mod sigmaart;
 pub mod sigmaaudiomanager2;
 pub mod sigmaauditmanager;
 pub mod sigmabluetoothmanager2;
